@@ -19,6 +19,7 @@ layout = "centered"
 st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
 st.markdown(f"<h1 style='text-align: center; color: #000080;'>{page_title}</h1>",
             unsafe_allow_html=True)
+st.write('---')
 
 def _max_width_():
     max_width_str = f"max-width: 1450px;"
@@ -39,6 +40,7 @@ hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
+            header {visibility: hidden;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
@@ -46,7 +48,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 #----------- Embed PDF in Streamlit --------
 def show_pdf(file_path):
-    with open(file_path,"rb") as f:
+    with open(file_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
     pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
@@ -73,12 +75,12 @@ if choose == "About":
         st.markdown(""" <style> .font {
         font-size:35px ; font-family: 'Cooper Black'; color: #FF9633;}
         </style> """, unsafe_allow_html=True)
-        job_title = "Data scientist | NLP | Python Engineer"
+        job_title = "Data scientist | Python Engineer"
         st.markdown(f"<h2 class='font'>{job_title}</h2>", unsafe_allow_html=True)
     with col2:               # To display brand log
         st.image(logo, width=130)
 
-
+    # --------- ABOUT ME ------------------
     st.markdown(f"<h2 style='text-align: center; font-style: italic;'>About the creator :</h2>",
                 unsafe_allow_html=True)
     description = "Elhadji is a data science practitioner, enthusiast, and Python Engineer. He run data science projects with Python or R to deal with NLP applications aand/or Object Detection problems. He works on data visualization, builds Streamlit app, etc. He is also a football amateur who loves pop music.\n\n"
@@ -88,14 +90,25 @@ if choose == "About":
     st.markdown(f'<p class="font_par">{description}</p>',
                 unsafe_allow_html=True)
 
-    #------- display my cv -------------
-    with st.expander("ℹ️  View & Download Elhadji's CV", expanded=False):
+    #------- DISPLAY MY CV  ----------------
+    with st.expander("ℹ️  DISPLAY Elhadji's CV", expanded=False):
         try:
             show_pdf(f'./{cv_name}')
         except:
             st.warning('File type should pdf !!!')
 
+    # ------ CV DOWNLOAD BUTTON ------------
+    col1, col2, col3= st.columns(3)
 
+    with col2:
+        with open(f'./{cv_name}', "rb") as pdf_file:
+            PDFbyte = pdf_file.read()
+        st.download_button(label="Download PDF CV/Resume", key='1',
+                data=PDFbyte,
+                file_name="pandas-clean-id-column.pdf",
+                mime='application/octet-stream')
+
+    # -------- SOCIAL MEDIA LINKS ----------
     st.header('')
     linkedin_p = 'To read more about her profile on the social media.'
     st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
@@ -111,13 +124,9 @@ if choose == "About":
 
 
 
-
-
-
-
-elif choose == "Blog":
-        topic = option_menu(None, ["Streamlit", "Pandas", "Plotly", "Folium"],
-                         icons=['book', 'book','book','book'],
+elif choose == "Projects":
+        topic = option_menu(None, ["Konvo", "Web-Scraping", "Text-Summary", "FAREX"],
+                         icons=['gear', 'cloud-arrow-down','journal-text','display'],
                          menu_icon="list", default_index=0,
                          styles={
         "container": {"padding": "5!important", "background-color": "#fafafa"},
@@ -128,99 +137,47 @@ elif choose == "Blog":
         )
 
         st.write('')
-        def show_pdf(file_path):
-            with open(file_path,"rb") as f:
-                base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-            pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
-            st.markdown(pdf_display, unsafe_allow_html=True)
-
-        if topic=='Pandas':
-            feature_image1 = Image.open(r'C:\Users\13525\Desktop\Insights Bees\streamlit_website\Images\feature_image1.jpg')
+        if topic=='Konvo':
+            feature_image1 = Image.open(r'./konvo_app.jpg')
+            st.markdown(f"<h4 style='text-align: left; font-style: italic;'>Konvoo Project 2022</h4>",
+                        unsafe_allow_html=True)
             with st.container():
-                image_col, text_col = st.columns((1,3))
+                image_col, text_col = st.columns((2,3))
                 with image_col:
-                    st.image(feature_image1,caption='Image by Pixabay')
+                    st.image(feature_image1,
+                             width = 200,
+                             caption='Image by Elhadji')
                 with text_col:
                     st.markdown(""" <style> .font {
-                    font-size:22px ; font-family: 'Black'; color: #FFFFF;}
+                    font-size:18px ; font-family: 'Black'; color: #FFFFF;}
                     </style> """, unsafe_allow_html=True)
-                    st.markdown('<p class="font">Clean a ‘Numeric’ ID Column in Pandas Dataframe</p>', unsafe_allow_html=True)
-                    st.markdown("By Sharone Li - As a data scientist, you must have encountered this problem at least once in your data science journey: you import your data into a Pandas dataframe... [Continue to Read on Towards Data Science](https://towardsdatascience.com/clean-a-numeric-id-column-in-pandas-dataframe-fbe03c11e330)")
+                    text = """
+                    The ETP (Patient Therapeutic Education) aims to help patients acquire or maintain the skills they need to best manage their lives with a chronic disease.
+                    It takes the form of a personalized appointment between a pharmacist and its patient in the pharmacy.
+                    The pharmacist has an important role to play in this area, as he is the easiest health professional accessible for any patient.
+                    """
+                    st.markdown(f'<p class="font">{text}</p>', unsafe_allow_html=True)
+                    st.markdown("By Konvoo Team - Sentiments and Emotions Inference.\n [Continue to Read The Presentation here ...](https://docs.google.com/presentation/d/1kzYbUGTWuDo46uSu7_PCcvOsqwIbHhlGuMPR9fAgGi4/edit?usp=sharing)")
 
             col1, col2,col3= st.columns(3)
+
             with col1:
-                if st.button('Read PDF Tutorial',key='1'):
-                    show_pdf('post1-compressed.pdf')
+                if st.button('Read the presentation',key='2'):
+                    show_pdf('./KONVO_PROJECT.pdf')
+
             with col2:
-                st.button('Close PDF Tutorial',key='2')
+                st.button('Close the presentation',key='3')
+
             with col3:
-                with open("post1-compressed.pdf", "rb") as pdf_file:
+                with open("./KONVO_PROJECT.pdf", "rb") as pdf_file:
                     PDFbyte = pdf_file.read()
-                st.download_button(label="Download PDF Tutorial", key='3',
+                st.download_button(label="Download the presentation", key='4',
                         data=PDFbyte,
                         file_name="pandas-clean-id-column.pdf",
                         mime='application/octet-stream')
 
-            for text in ["Is this tutorial helpful?"]:
-                    response = st_text_rater(text=text, key='1')
+
+            for text in ["How do you find this presentation ?"]:
+                response = st_text_rater(text=text, key='5')
 
             st.write('---')
-            feature_image2 = Image.open(r'C:\Users\13525\Desktop\Insights Bees\streamlit_website\Images\feature_image3.png')
-            with st.container():
-                image_col, text_col = st.columns((1,3))
-                with image_col:
-                    st.image(feature_image2,caption='Image by Pixabay')
-
-                with text_col:
-                    st.markdown(""" <style> .font {
-                    font-size:22px ; font-family: 'Black'; color: #FFFFF;}
-                    </style> """, unsafe_allow_html=True)
-                    st.markdown('<p class="font">How to Batch Rename Columns in Pandas Based on Patterns</p>', unsafe_allow_html=True)
-                    st.markdown("By Sharone Li - If you have been following my Medium blog for some time, you may notice that I usually like to share... [Continue to Read on CodeX](https://medium.com/codex/how-to-batch-rename-columns-in-pandas-based-on-patterns-7d2382b5fc9a)")
-
-            col1, col2,col3 = st.columns(3)
-            with col1:
-                #st.button('Read PDF Tutorial', key='1')
-
-                if st.button('Read PDF Tutorial',key='7'):
-                  show_pdf('post3.pdf')
-            with col2:
-                st.button('Close PDF Tutorial',key='8')
-            with col3:
-                with open("post3.pdf", "rb") as pdf_file:
-                    PDFbyte = pdf_file.read()
-
-                st.download_button(label="Download PDF Tutorial",key='9',
-                        data=PDFbyte,
-                        file_name="pandas-rename-columns.pdf",
-                        mime='application/octet-stream')
-            for text in ["Is this tutorial helpful?"]:
-                    response = st_text_rater(text=text, key='2')
-
-            st.write('---')
-            feature_image3 = Image.open(r'C:\Users\13525\Desktop\Insights Bees\streamlit_website\Images\feature_image2.png')
-            with st.container():
-                image_col, text_col = st.columns((1,3))
-                with image_col:
-                    st.image(feature_image3,caption='Image by Pixabay')
-
-                with text_col:
-                    st.markdown('<p class="font">Why and How to Reshape a Pandas Dataframe from Wide to Long</p>', unsafe_allow_html=True)
-                    st.markdown("By Sharone Li - As data scientists, we know that data does not always come to us with the most desirable format... [Continue to Read on Towards Data Science](https://towardsdatascience.com/clean-a-numeric-id-column-in-pandas-dataframe-fbe03c11e330)")
-
-            col1, col2,col3 = st.columns(3)
-            with col1:
-                if st.button('Read PDF Tutorial',key='4'):
-                    show_pdf('post1-compressed.pdf')
-            with col2:
-                st.button('Close PDF Tutorial',key='5')
-            with col3:
-                with open("post1-compressed.pdf", "rb") as pdf_file:
-                    PDFbyte = pdf_file.read()
-
-                st.download_button(label="Download PDF Tutorial",key='6',
-                        data=PDFbyte,
-                        file_name="pandas-reshape-dataframe.pdf",
-                        mime='application/octet-stream')
-            for text in ["Is this tutorial helpful?"]:
-                response = st_text_rater(text=text, key='3')

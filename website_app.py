@@ -37,7 +37,6 @@ _max_width_()
 # --- HIDE STREAMLIT STYLE ---
 hide_st_style = """
             <style>
-            #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
@@ -99,7 +98,7 @@ if choose == "About":
     st.header('')
     linkedin_p = 'To read more about her profile on the social media.'
     st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
-    st.image(profile, width=900)
+    st.image(profile, width=700)
     st.info("Please visit her Linkedin page at :link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")
     st.info("Please visit her Apec page at :link:: https://www.apec.fr/candidat/mon-espace.html#/")
     st.info("Please visit her github page at :link:: https://github.com/engom")

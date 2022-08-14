@@ -105,7 +105,7 @@ if choose == "About":
             PDFbyte = pdf_file.read()
         st.download_button(label="Download PDF CV/Resume", key='1',
                 data=PDFbyte,
-                file_name="pandas-clean-id-column.pdf",
+                file_name="CV-Elhadji-Ngom.pdf",
                 mime='application/octet-stream')
 
     # -------- SOCIAL MEDIA LINKS ----------
@@ -173,7 +173,7 @@ elif choose == "Projects":
                     PDFbyte = pdf_file.read()
                 st.download_button(label="Download the presentation", key='4',
                         data=PDFbyte,
-                        file_name="pandas-clean-id-column.pdf",
+                        file_name="konvo-presentation.pdf",
                         mime='application/octet-stream')
 
 

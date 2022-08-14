@@ -10,7 +10,7 @@ import base64
 from streamlit_text_rating.st_text_rater import st_text_rater
 
 # -------------- SETTINGS --------------
-page_title = "Welcome To Elhadji Ngom's Webpage"
+page_title = "Welcome To Elhadji Ngom's Personal Webpage"
 page_icon = ":earth_africa:"  # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 cv_name = 'CV-Elhadji-Ngom.pdf'
 layout = "centered"
@@ -89,7 +89,7 @@ if choose == "About":
                 unsafe_allow_html=True)
 
     #------- display my cv -------------
-    with st.expander("ℹ️  View & Download Elhadji's CV:", expanded=False):
+    with st.expander("ℹ️  View & Download Elhadji's CV", expanded=False):
         try:
             show_pdf(f'./{cv_name}')
         except:
@@ -100,8 +100,10 @@ if choose == "About":
     linkedin_p = 'To read more about her profile on the social media.'
     st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
     st.image(profile, width=900)
-    st.write("\n\nPlease visit her Linkedin page at :link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")
-    st.write("\n\nPlease visit her Apec page at :link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")
+    st.info("Please visit her Linkedin page at :link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")
+    st.info("Please visit her Apec page at :link:: https://www.apec.fr/candidat/mon-espace.html#/")
+    st.info("Please visit her github page at :link:: https://github.com/engom")
+    st.info("Please visit the github of this page at :link:: https://github.com/engom/my_Webpage")
 
 
 

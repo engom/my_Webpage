@@ -1,4 +1,4 @@
-# Personal_Website
+# Personal Website
 Elhadji's personal website to showcase data science work:
 
 - DSTI: Konvo project:

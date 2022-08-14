@@ -37,6 +37,7 @@ _max_width_()
 # --- HIDE STREAMLIT STYLE ---
 hide_st_style = """
             <style>
+            #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
@@ -47,7 +48,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 def show_pdf(file_path):
     with open(file_path,"rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="890" height="800" type="application/pdf"></iframe>'
+    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
 
 
@@ -103,6 +104,11 @@ if choose == "About":
     st.info("Please visit her Apec page at :link:: https://www.apec.fr/candidat/mon-espace.html#/")
     st.info("Please visit her github page at :link:: https://github.com/engom")
     st.info("Please visit the github of this page at :link:: https://github.com/engom/my_Webpage")
+
+
+
+
+
 
 
 

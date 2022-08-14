@@ -38,12 +38,11 @@ _max_width_()
 # --- HIDE STREAMLIT STYLE ---
 hide_st_style = """
             <style>
-
+            #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
-
+            header {visibility: hidden;}
             </style>
             """
-            #MainMenu {visibility: hidden;} header {visibility: hidden;}
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 

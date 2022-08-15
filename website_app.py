@@ -217,8 +217,12 @@ elif choose == "Projects":
 elif choose == "Contact":
     # ------ TO DO -------
     st.success("Elhadji's mailbox :")
-    st.write(":arrow_lower_right: Please, let's get in touch : :love_letter: ngomel.ehn@gmail.com :love_letter:")
-    st.markdown('<a href="ngomel.ehn@gmail.com"> Contact me ! </a>', unsafe_allow_html=True)
+    c1, ce, c2 = st.columns(3)
+    with c1:
+        st.write(":arrow_lower_right: Please, let's get in touch :")
+        st.write("ngomel.ehn@gmail.com ✉️")
+    with c2:
+        st.markdown('<a href="ngomel.ehn@gmail.com">✉️Click here contact me !✉️ </a>', unsafe_allow_html=True)
     st.write('---')
 
     st.info("The github repo dedicated to this page :")

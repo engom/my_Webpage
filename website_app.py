@@ -95,7 +95,7 @@ if choose == "About":
     # --------- ABOUT ME ------------------
     st.markdown(f"<h2 style='text-align: center; font-style: italic;'>About the creator :</h2>",
                 unsafe_allow_html=True)
-    description = "Elhadji is a data science practitioner, enthusiast, and Python Engineer. He run data science projects with Python or R to deal with NLP applications aand/or Object Detection problems. He works on data visualization, builds Streamlit app, etc. He is also a football amateur who loves pop music.\n\n"
+    description = "Elhadji is a data science practitioner, enthusiast, and Python Engineer. He run data science projects with Python or R to deal with NLP applications aand/or Object Detection problems. He works on data visualization, builds Streamlit app, etc. He is also a football amateur who likes pop music.\n\n"
     st.markdown(""" <style> .font_par {
     font-size:20px ; font-family: 'Black'; color: #FFFFF; font-style: oblique;}
     </style> """, unsafe_allow_html=True)

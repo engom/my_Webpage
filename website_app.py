@@ -39,9 +39,9 @@ _max_width_()
 # --- HIDE STREAMLIT STYLE ---
 hide_st_style = """
             <style>
-            /* #MainMenu {visibility: hidden;} */
+            #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
-            /* header {visibility: hidden;} */
+            header {visibility: hidden;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
@@ -131,7 +131,7 @@ if choose == "About":
 
 
 elif choose == "Projects":
-    topic = option_menu(None, ["Konvo", "Web Scraping", "Text Summary"],
+    topic = option_menu(None, ["Konvoo", "Web Scraping", "Text Summary"],
                      icons=['gear', 'cloud-arrow-down','journal-text','display'],
                      menu_icon="list", default_index=0,
                      styles={
@@ -143,7 +143,7 @@ elif choose == "Projects":
     )
 
     st.write('')
-    if topic=='Konvo':
+    if topic=='Konvoo':
         feature_image1 = load_image(r'./konvo_app.jpg')
         feature_image2 = load_image(r'.//Camembert.png')
         st.markdown(f"<h4 style='text-align: left; font-style: italic;'>Konvoo Project 2022</h4>",

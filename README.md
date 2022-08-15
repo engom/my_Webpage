@@ -1,4 +1,4 @@
-## Technologies and Data science Tools:
+# Technologies and Data science Tools:
 
 Elhadji's personal website to showcase data science work.
 

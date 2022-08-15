@@ -1,12 +1,12 @@
-# Technologies and Data science Tools:
+## Technologies and Data Science Tools:
 
 Elhadji's personal website to showcase data science work.
 
 ### Main projects & toolbox overview:
 
-- DSTI: _**Konvo project**_ :
+- **DSTI:** _**Konvo project**_ :
 
-  - Tools : `Python` - `Jupyter-lab` - `Atom`
+  - **Tools:** `Python` - `Jupyter-lab` - `Atom`
 
   - Data Engineering:
     - **Web scraping:** `BeautifulSoup`, `Selenium`, `Scrapy`
@@ -48,7 +48,7 @@ Elhadji's personal website to showcase data science work.
 
 - DSTI: Advanced Statistics for Machine Learning
 
-  - Tool : `R`  
+  - **Tool** : `R`  
 
   - **Linear Regression Challenge**:
     - Preprocessing:
@@ -74,9 +74,9 @@ Elhadji's personal website to showcase data science work.
     - **VSURF** for features selection:
       - `VSURF` on `CART`
 
-  - Perform __Cross validation__ to choose model.
+  - Perform __Cross validation__ to choose the model.
 
   - Data source : `cancer_reg.csv`.
 
-  You can find the explanation of the variables on here
+  You can find the explanation of the variables:
   [link](https://data.world/exercises/linear-regression-exercise-1/workspace/file?filename=cancer_reg.csv).

@@ -77,4 +77,6 @@ Elhadji's personal website to showcase data science work.
   - Perform __Cross validation__ to choose model.
 
   - Data source : `cancer_reg.csv`.
-  [Link](https://data.world/exercises/linear-regression-exercise-1/workspace/file?filename=cancer_reg.csv), you can find the explanation of the variables.
+
+  You can find the explanation of the variables on here
+  [Link](https://data.world/exercises/linear-regression-exercise-1/workspace/file?filename=cancer_reg.csv).

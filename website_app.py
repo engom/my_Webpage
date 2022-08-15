@@ -91,6 +91,7 @@ if choose == "About":
         st.markdown(f"<h2 class='font'>{job_title}</h2>", unsafe_allow_html=True)
     with col2:               # To display brand log
         st.image(logo, width=130)
+    st.write('---')
 
     # --------- ABOUT ME ------------------
     st.markdown(f"<h2 style='text-align: center; font-style: italic;'>About the creator :</h2>",
@@ -159,11 +160,11 @@ elif choose == "Projects":
                          width = 200)
             with text_col:
                 st.markdown(""" <style> .font {
-                font-size:18px ; font-family: 'Black'; color: #FFFFF;}
+                font-size:20px ; font-family: 'Black'; color: #FFFFF;}
                 </style> """, unsafe_allow_html=True)
                 text = read_markdown_file(r'./konvo_descrip.md')
                 st.markdown(f'<p class="font">{text}</p>', unsafe_allow_html=True)
-                st.markdown("By Konvoo Team - **Sentiments and Emotions Prediction**.\n\n [Continue to Read The Presentation here ...](https://docs.google.com/presentation/d/1kzYbUGTWuDo46uSu7_PCcvOsqwIbHhlGuMPR9fAgGi4/edit?usp=sharing)")
+                st.markdown("By Konvoo Team - **Sentiments and Emotions Prediction**.\n\n [Continue to Read The Konvoo here ...](https://docs.google.com/presentation/d/1kzYbUGTWuDo46uSu7_PCcvOsqwIbHhlGuMPR9fAgGi4/edit?usp=sharing)")
 
         col1, col2,col3= st.columns(3)
 
@@ -194,16 +195,16 @@ elif choose == "Projects":
 
 
     elif topic == "Web Scraping":
-        st.info('TO DO: Konvoo Web Scraping: doctissimo.fr')
+        st.info('TO DO: Konvoo Web Scraping: doctissimo.fr !!')
 
         st.write('___')
 
-        st.info('TO DO: World bank data scraping')
+        st.info('TO DO: World bank data scraping !!')
 
 
 
     elif topic == "Text Summary":
-        st.info('TO DO : Update is coming soon')
+        st.info('TO DO : Update is coming soon !!')
 
 
 

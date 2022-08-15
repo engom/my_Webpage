@@ -2,7 +2,7 @@
 
 Elhadji's personal website to showcase data science work.
 
-### Main projects toolbox overview:
+### Main projects & toolbox overview:
 
 - DSTI: _**Konvo project**_ :
 

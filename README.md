@@ -79,4 +79,4 @@ Elhadji's personal website to showcase data science work.
   - Data source : `cancer_reg.csv`.
 
   You can find the explanation of the variables on here
-  [Link](https://data.world/exercises/linear-regression-exercise-1/workspace/file?filename=cancer_reg.csv).
+  [link](https://data.world/exercises/linear-regression-exercise-1/workspace/file?filename=cancer_reg.csv).

@@ -222,7 +222,7 @@ elif choose == "Contact":
         st.write(":arrow_lower_right: Please, let's get in touch :")
         st.write("ngomel.ehn@gmail.com ✉️")
     with c2:
-        st.markdown('<a href="ngomel.ehn@gmail.com">✉️Click here contact me !✉️ </a>', unsafe_allow_html=True)
+        st.markdown('<a href="ngomel.ehn@gmail.com">✉️ Contact me ! ✉️ </a>', unsafe_allow_html=True)
     st.write('---')
 
     st.info("The github repo dedicated to this page :")

@@ -6,4 +6,4 @@ THE SCOPE
 
 - The pharmacist has an important role to play in this area, as he is _the easiest health professional accessible for any patient_.
 
-- In project, we built an **IA model** based on **BERT** in **NLP** that helps the pharmacist to automate sentiments and emotions analysis from form submitted by the patient when booking an **ETP** appointment.
+- In this project, we built an **IA model** based on **BERT** in **NLP** that helps the pharmacist to automate sentiments and emotions analysis from form submitted by the patient when booking an **ETP** appointment.

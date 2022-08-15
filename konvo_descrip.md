@@ -1,4 +1,4 @@
-### Description :
+# Description
 
 - The **ETP** (Patient Therapeutic Education) _aims to help patients_ acquire or maintain the skills they need _to best manage their lives with a chronic disease_.
 

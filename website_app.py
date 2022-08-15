@@ -11,7 +11,7 @@ import base64
 from streamlit_text_rating.st_text_rater import st_text_rater
 
 # -------------- SETTINGS --------------
-page_title = "Elhadji Ngom's Webpage\n\n Welcome "
+page_title = "Elhadji Ngom's Webpage\n\n 📍Welcome📍"
 page_icon = ":earth_africa:"  # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 cv_name = 'CV-Elhadji-Ngom.pdf'
 layout = "wide" # "centered"
@@ -41,7 +41,7 @@ hide_st_style = """
             <style>
             /* #MainMenu {visibility: hidden;} */
             footer {visibility: hidden;}
-            /* header {visibility: hidden;} */ 
+            /* header {visibility: hidden;} */
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
@@ -55,7 +55,7 @@ def show_pdf(file_path):
     st.markdown(pdf_display, unsafe_allow_html=True)
 
 # ---------- Load markdown file ------------
-@st.cache(allow_output_mutation=True)
+#@st.cache(allow_output_mutation=True)
 def read_markdown_file(markdown_file):
     return Path(markdown_file).read_text()
 
@@ -145,6 +145,7 @@ elif choose == "Projects":
     st.write('')
     if topic=='Konvo':
         feature_image1 = load_image(r'./konvo_app.jpg')
+        feature_image2 = load_image(r'.//Camembert.png')
         st.markdown(f"<h4 style='text-align: left; font-style: italic;'>Konvoo Project 2022</h4>",
                     unsafe_allow_html=True)
         with st.container():
@@ -153,13 +154,16 @@ elif choose == "Projects":
                 st.image(feature_image1,
                          width = 200,
                          caption='Image by Elhadji')
+
+                st.image(feature_image2,
+                         width = 200)
             with text_col:
                 st.markdown(""" <style> .font {
                 font-size:18px ; font-family: 'Black'; color: #FFFFF;}
                 </style> """, unsafe_allow_html=True)
                 text = read_markdown_file(r'./konvo_descrip.md')
                 st.markdown(f'<p class="font">{text}</p>', unsafe_allow_html=True)
-                st.markdown("By Konvoo Team - Sentiments and Emotions Inference.\n [Continue to Read The Presentation here ...](https://docs.google.com/presentation/d/1kzYbUGTWuDo46uSu7_PCcvOsqwIbHhlGuMPR9fAgGi4/edit?usp=sharing)")
+                st.markdown("By Konvoo Team - **Sentiments and Emotions Prediction**.\n\n [Continue to Read The Presentation here ...](https://docs.google.com/presentation/d/1kzYbUGTWuDo46uSu7_PCcvOsqwIbHhlGuMPR9fAgGi4/edit?usp=sharing)")
 
         col1, col2,col3= st.columns(3)
 
@@ -178,12 +182,6 @@ elif choose == "Projects":
                     file_name="konvo-presentation.pdf",
                     mime='application/octet-stream')
 
-        c1, ce, c2 = st.columns(3)
-        with ce:
-            feature_image2 = load_image(r'.//Camembert.png')
-            st.image(feature_image2,
-                     width = 200)
-
 
         for text in ["How do you find this presentation ?"]:
             response = st_text_rater(text=text, key='5')
@@ -196,14 +194,16 @@ elif choose == "Projects":
 
 
     elif topic == "Web Scraping":
-        st.info('TO FILL: Konvoo Web Scraping: doctissimo.fr')
+        st.info('TO DO: Konvoo Web Scraping: doctissimo.fr')
 
-        st.info('TO FILL: World bank data scraping')
+        st.write('___')
+
+        st.info('TO DO: World bank data scraping')
 
 
 
     elif topic == "Text Summary":
-        st.write('TO DO !')
+        st.info('TO DO : Update is coming soon')
 
 
 

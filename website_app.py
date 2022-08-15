@@ -157,11 +157,7 @@ elif choose == "Projects":
                 st.markdown(""" <style> .font {
                 font-size:18px ; font-family: 'Black'; color: #FFFFF;}
                 </style> """, unsafe_allow_html=True)
-                text = """
-                The ETP (Patient Therapeutic Education) aims to help patients acquire or maintain the skills they need to best manage their lives with a chronic disease.
-                It takes the form of a personalized appointment between a pharmacist and its patient in the pharmacy.
-                The pharmacist has an important role to play in this area, as he is the easiest health professional accessible for any patient.
-                """
+                text = read_markdown_file(r'./konvo_descrip.md')
                 st.markdown(f'<p class="font">{text}</p>', unsafe_allow_html=True)
                 st.markdown("By Konvoo Team - Sentiments and Emotions Inference.\n [Continue to Read The Presentation here ...](https://docs.google.com/presentation/d/1kzYbUGTWuDo46uSu7_PCcvOsqwIbHhlGuMPR9fAgGi4/edit?usp=sharing)")
 

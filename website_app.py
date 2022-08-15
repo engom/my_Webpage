@@ -103,7 +103,7 @@ if choose == "About":
                 unsafe_allow_html=True)
 
     #------- DISPLAY MY CV  ----------------
-    with st.expander("ℹ️  DISPLAY Elhadji's CV", expanded=False):
+    with st.expander("ℹ️  Read Elhadji's CV", expanded=False):
         try:
             show_pdf(f'./{cv_name}')
         except:
@@ -195,7 +195,7 @@ elif choose == "Projects":
 
         st.markdown('---')
         readme = read_markdown_file(r"./README.md")
-        st.markdown(readme, unsafe_allow_html=True)
+        st.markdown(f'<p class="font">{readme}</p>', unsafe_allow_html=True)
 
 
 

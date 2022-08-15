@@ -1,15 +1,16 @@
-# Personal Website
+## Technologies and Data science Tools:
+
 Elhadji's personal website to showcase data science work.
 
-## Main projects
+### Main projects toolbox overview:
 
 - DSTI: _**Konvo project**_ :
 
-  - Tools : **Python** - Colab - Jupyter notebook - Atom
+  - Tools : `Python` - `Jupyter-lab` - `Atom`
 
   - Data Engineering:
-    - **Web scraping:** Beautiful Soup, Selenium, Scrapy
-    - **Cloud computing:** AWS lambda, ECR, Docker, S3
+    - **Web scraping:** `BeautifulSoup`, `Selenium`, `Scrapy`
+    - **Cloud computing/AWS:**  `Lambda`, `ECR`, `Docker`, `S3`, ...
 
   - Data science
     - **Preprocessing** text data
@@ -18,48 +19,48 @@ Elhadji's personal website to showcase data science work.
 
     - **Sentiments analysis** modeling:
       - **BERT** - CamemBERT - DistlBERT
-      - Pytorch & TensorFlow
-      - Colab - `CUDA`
+      - `Pytorch & TensorFlow`
+      - `Colab` - `CUDA`
 
     - **Emotions analysis** modeling:
-      - **BERT* - Camembert
-      - Pytorch
-      - Colab
+      - **BERT** - `CamemBERT`
+      - `Pytorch`
+      - `Colab`
 
     - **Deployment & Inference**:
       - Streamlit API
       - AWS EC2
-      - Docker
+      - `Docker`
 
 - OIF: _**Web scraping project**_ :
-  - Selenium
-  - Streamlit
+  - `Selenium`
+  - `Streamlit`
 
 - OIF: **Text summarizer project** :
-  - **BART**: Camembert, Faubert, BARThez
-  - **spaCy**
-  - **Streamlit**
+  - **BART**: CamemBERT, FauBERT, BARThez
+  - `spaCy`
+  - `Streamlit`
 
 - OIF: FAREX project :
-  - **WorlCloup**
-  - **spaCy**
-  - **Streamlit**
+  - `WorlCloup`
+  - `spaCy`
+  - `Streamlit`
 
 - DSTI: Advanced Statistics for Machine Learning
 
-  - Tools : `R` & `Rstudio`
+  - Tool : `R`  
 
   - **Linear Regression Challenge**:
     - Preprocessing:
       - Handle the missing values: `missMDA`
 
-    - Ordinary Least Square (OLS)
+    - **Ordinary Least Square (OLS)**
 
     - __Variables/features selection__ :
       - Step by step method:
         - `step`
 
-      - **LASSO**:
+      - **LASSO Regression**:
         - `glmnet`
         - `alpha = 1` for $L_1$ norm.
 
@@ -71,7 +72,7 @@ Elhadji's personal website to showcase data science work.
       - `randomForest`
 
     - **VSURF** for features selection:
-      - `VSURF` CART
+      - `VSURF` on `CART`
 
   - Perform __Cross validation__ to choose model.
 

@@ -41,8 +41,8 @@ Elhadji's personal website to showcase data science work.
   - `spaCy`
   - `Streamlit`
 
-- OIF: FAREX project :
-![farex](farex.png)
+- OIF: **FAREX digital project** :
+![farex](https://github.com/engom/my_Webpage/raw/main/farex.png)
   - `WorlCloup`
   - `spaCy`
   - `Streamlit`

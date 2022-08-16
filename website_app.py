@@ -20,7 +20,7 @@ layout = "wide" # "centered"
 st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
 st.markdown(f"<h1 style='text-align: center; color: #7D3C98;'>{page_title}</h1>",
             unsafe_allow_html=True) # #000080
-st.write('---')
+#st.write('---')
 
 def _max_width_():
     max_width_str = f"max-width: 1450px;"
@@ -98,7 +98,7 @@ if choose == "About":
                 unsafe_allow_html=True)
     description = "Elhadji is a data science practitioner, enthusiast, and Python Engineer. He run data science projects with Python or R to deal with NLP applications and/or Object Detection problems. He works on data visualization, builds Streamlit app, etc. He is also a football amateur who likes pop music.\n\n"
     st.markdown(""" <style> .font_par {
-    font-size:20px ; font-family: 'Black'; color: #FFFFF; font-style: oblique;}
+    font-size:24px ; font-family: 'Black'; color: #FFFFF; font-style: oblique;}
     </style> """, unsafe_allow_html=True)
     st.markdown(f'<p class="font_par">{description}</p>',
                 unsafe_allow_html=True)
@@ -133,7 +133,7 @@ if choose == "About":
 
 elif choose == "Projects":
     topic = option_menu(None, ["Konvoo", "Web Scraping", "Text Summary"],
-                     icons=['gear', 'cloud-arrow-down','journal-text','display'],
+                     icons=['gear', 'cloud-arrow-down', 'display'],
                      menu_icon="list", default_index=0,
                      styles={
     "container": {"padding": "5!important", "background-color": "#95A5A6"}, # "#fafafa"
@@ -160,7 +160,7 @@ elif choose == "Projects":
                          width = 200)
             with text_col:
                 st.markdown(""" <style> .font {
-                font-size:20px ; font-family: 'Black'; color: #FFFFF;}
+                font-size:24px ; font-family: 'Black'; color: #FFFFF;}
                 </style> """, unsafe_allow_html=True)
                 text = read_markdown_file(r'./konvo_descrip.md')
                 st.markdown(f'<p class="font">{text}</p>', unsafe_allow_html=True)
@@ -216,7 +216,7 @@ elif choose == "Projects":
 
 elif choose == "Contact":
     # ------ TO DO -------
-    st.success("Elhadji's mailbox :")
+    st.success("ELHADJI'S MAILBOX :")
     c1, ce, c2 = st.columns(3)
     with c1:
         st.write(":arrow_lower_right: Please, let's get in touch :")

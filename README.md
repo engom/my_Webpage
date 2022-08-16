@@ -1,4 +1,4 @@
-# Technologies and Data Science Tools:
+Technologies and Data Science Tools:
 
 Elhadji's personal website to showcase data science work.
 
@@ -42,12 +42,12 @@ Elhadji's personal website to showcase data science work.
   - `Streamlit`
 
 - OIF: **FAREX digital project** :
-![farex](https://github.com/engom/my_Webpage/raw/main/farex.png)
   - `WorlCloup`
   - `spaCy`
   - `Streamlit`
+![farex](https://github.com/engom/my_Webpage/raw/main/farex.png)
 
-- DSTI: Advanced Statistics for Machine Learning
+- DSTI: **Advanced Statistics for Machine Learning**
 
   - **Tool** : `R`  
 

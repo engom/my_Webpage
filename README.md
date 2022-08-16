@@ -1,4 +1,4 @@
-## Technologies and Data Science Tools:
+> Technologies and Data Science Tools:
 
 Elhadji's personal website to showcase data science work.
 
@@ -42,6 +42,7 @@ Elhadji's personal website to showcase data science work.
   - `Streamlit`
 
 - OIF: FAREX project :
+![farex](farex.png)
   - `WorlCloup`
   - `spaCy`
   - `Streamlit`

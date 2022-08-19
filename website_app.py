@@ -176,7 +176,7 @@ def main():
                     st.markdown(f'<p class="font">{text}</p>', unsafe_allow_html=True)
                     st.markdown("By Konvoo Team - **Sentiments and Emotions Prediction**.\n\n [Continue to Read The Konvoo here ...](https://docs.google.com/presentation/d/1kzYbUGTWuDo46uSu7_PCcvOsqwIbHhlGuMPR9fAgGi4/edit?usp=sharing)")
 
-            col1, col2,col3= st.columns(3)
+            col1, col2,col3= st.columns([3, 3, 1])
 
             with col1:
                 if st.button('Read the presentation',key='2'):
@@ -188,7 +188,7 @@ def main():
             with col3:
                 with open("./KONVO_PROJECT.pdf", "rb") as pdf_file:
                     PDFbyte = pdf_file.read()
-                st.download_button(label="Download pdf", key='4',
+                st.download_button(label="Download", key='4',
                         data=PDFbyte,
                         file_name="konvo-presentation.pdf",
                         mime='application/octet-stream')

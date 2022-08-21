@@ -8,8 +8,8 @@ Elhadji's personal website to showcase data science work.
   - **Tools:** `Python` - `Jupyter-lab` - `Atom`
 
   - Data Engineering:
-    - **Web scraping:** `BeautifulSoup`, `Selenium`, `Scrapy`
-    - **Cloud computing/AWS:**  `Lambda`, `ECR`, `Docker`, `S3`, ...
+    - **Web scraping:** `BeautifulSoup` - `Selenium` - `Scrapy`
+    - **Cloud computing/AWS:**  `Lambda` - `ECR` - `Docker` - `S3` - ...
 
   - Data science
     - **Preprocessing** text data
@@ -37,7 +37,7 @@ Elhadji's personal website to showcase data science work.
   - `Streamlit`
 
 - OIF: **Text Summarization Project** :
-  - **BART**: CamemBERT, FauBERT, BARThez
+  - **BART**: CamemBERT - FauBERT - BARThez
   - `spaCy`
   - `Streamlit`
 
@@ -77,7 +77,10 @@ Elhadji's personal website to showcase data science work.
   [link](https://data.world/exercises/linear-regression-exercise-1/workspace/file?filename=cancer_reg.csv).
 
   - OIF: **LE FAREX WEB** :
-    - `WorlCloup`
-    - `spaCy`
-    - `Streamlit`
-  ![farex](https://github.com/engom/my_Webpage/raw/main/farex.png)
+    - Toolbox:
+      - `WorlCloup`
+      - `spaCy`
+      - `Streamlit`
+
+    - Sschema:
+    ![farex](https://github.com/engom/my_Webpage/raw/main/farex.png)

@@ -106,7 +106,7 @@ def main():
         # --------- ABOUT ME ------------------
         st.markdown(f"<h2 style='text-align: center; font-style: italic;'>About the creator :</h2>",
                     unsafe_allow_html=True)
-        description = "Elhadji is a data science practitioner, enthusiast, and Python Engineer. He run data science projects with Python or R to deal with NLP applications and/or Object Detection problems. He works on data visualization, builds Streamlit app, etc. He is also a football amateur who likes pop music.\n\n"
+        description = "Elhadji is a Data science practitioner, NLP enthusiast, and Python Engineer. He run data science projects with Python or R to deal with NLP applications and/or Object Detection problems. He works on data visualization, builds Streamlit app, etc. He is also a football amateur who likes pop music.\n\n"
         st.markdown(""" <style> .font_par {
         font-size:24px ; font-family: 'Black'; color: #FFFFF; font-style: oblique;}
         </style> """, unsafe_allow_html=True)
@@ -164,7 +164,7 @@ def main():
                 with image_col:
                     st.image(feature_image1,
                              width = 200,
-                             caption='Image by Elhadji')
+                             caption='Architecture - By Elhadji')
 
                     st.image(feature_image2,
                              width = 200)
@@ -201,7 +201,7 @@ def main():
         elif topic == "Overview":
             # st.markdown('---')
             with st.container():
-                left, right = st.columns([0.8, 0.2])
+                left, right = st.columns([0.75, 0.25])
                 with left:
                     readme = read_markdown_file(r"./README.md")
                     st.markdown(f'<p class="font">{readme}</p>',
@@ -275,7 +275,7 @@ def main():
 
         elif topic == "Text Summary":
             proj_schema = load_image(r'./images/summarier_pipeline.jpg')
-            st.image(proj_schema, width=800)
+            st.image(proj_schema, width=800, caption='Text Summarizer Pipeline (spaCy + BART) - By Elhadji')
 
             st.info('Update is coming soon !!')
 

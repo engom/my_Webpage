@@ -298,10 +298,10 @@ def main():
             st.markdown('<a href="ngomel.ehn@gmail.com">✉️ Contact me ! ✉️ </a>', unsafe_allow_html=True)
         st.write('---')
 
-        st.info("The github repo dedicated to this page :")
-        st.write("Please click on :link:: https://github.com/engom/my_Webpage")
+        #st.info("The github repo dedicated to this page :")
+        #st.write("Please click on :link:: https://github.com/engom/my_Webpage")
 
-        st.write('---')
+        #st.write('---')
         thank_you = "Thank you for your time !!!"
         st.markdown(f"<h3 style='text-align: center; color: #7D3C98 ;'>{thank_you}</h3>",
                     unsafe_allow_html=True)

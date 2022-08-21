@@ -208,8 +208,7 @@ def main():
                                 unsafe_allow_html=True)
 
                 with right:
-                    st.text('FRAMEWORKS')
-                    st.text('')
+                    st.text('RROGRAMMING')
 
                     python = load_image(r'./images/Python_logo.png')
                     st.image(python, width=150)
@@ -221,8 +220,9 @@ def main():
 
                     Rlogo = load_image(r'./images/Rlogo.png')
                     st.image(Rlogo, width=100)
-                    st.text('')
+                    st.write('---')
 
+                    st.text('FRAMEWORKS')
                     TensorFlow_logo = load_image(r'./images/TensorFlowLogo.png')
                     st.image(TensorFlow_logo, width=130)
                     st.text('')

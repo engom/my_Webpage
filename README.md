@@ -1,8 +1,9 @@
-Technologies and Data Science Tools:
+PROJECT OVERVIEW
 
+## Main projects overview:
 Elhadji's personal website to showcase data science work.
 
-### Main projects & toolbox overview:
+### Data Science Toolbox:
 
 - **DSTI:** _**Konvo project**_ :
 
@@ -28,9 +29,10 @@ Elhadji's personal website to showcase data science work.
       - `Colab`
 
     - **Deployment & Inference**:
-      - Streamlit API
-      - AWS EC2
+      - `Streamlit REST API`
+      - `EC2`
       - `Docker`
+      - `MLflow`
 
 - OIF: _**Web scraping project**_ :
   - `Selenium`
@@ -40,12 +42,6 @@ Elhadji's personal website to showcase data science work.
   - **BART**: CamemBERT, FauBERT, BARThez
   - `spaCy`
   - `Streamlit`
-
-- OIF: **FAREX digital project** :
-  - `WorlCloup`
-  - `spaCy`
-  - `Streamlit`
-![farex](https://github.com/engom/my_Webpage/raw/main/farex.png)
 
 - DSTI: **Advanced Statistics for Machine Learning**
 
@@ -81,3 +77,9 @@ Elhadji's personal website to showcase data science work.
 
   You can find the explanation of the variables:
   [link](https://data.world/exercises/linear-regression-exercise-1/workspace/file?filename=cancer_reg.csv).
+
+  - OIF: **FAREX digital project** :
+    - `WorlCloup`
+    - `spaCy`
+    - `Streamlit`
+  ![farex](https://github.com/engom/my_Webpage/raw/main/farex.png)

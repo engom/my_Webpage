@@ -89,8 +89,8 @@ def main():
         }
         )
 
-    logo = load_image(r'./data_science.png')
-    profile = load_image(r'./my_in_profile.png')
+    logo = load_image(r'./images/data_science.png')
+    profile = load_image(r'./images/my_in_profile.png')
     if choose == "About":
         col1, col2 = st.columns([0.8, 0.2])
         with col1:               # To display the header text using css style
@@ -142,8 +142,8 @@ def main():
 
 
     elif choose == "Projects":
-        topic = option_menu(None, ["Konvoo", "Web Scraping", "Text Summary"],
-                         icons=['gear', 'cloud-arrow-down', 'display'],
+        topic = option_menu(None, ["Overview", "Konvoo", "Web Scraping", "Text Summary"],
+                         icons=['gear-fill', 'gear', 'cloud-arrow-down', 'display'],
                          menu_icon="list", default_index=0,
                          styles={
         "container": {"padding": "5!important", "background-color": "#95A5A6"}, # "#fafafa"
@@ -155,8 +155,8 @@ def main():
 
         st.write('')
         if topic=='Konvoo':
-            feature_image1 = load_image(r'./konvo_app.jpg')
-            feature_image2 = load_image(r'.//Camembert.png')
+            feature_image1 = load_image(r'./images/konvo_app.jpg')
+            feature_image2 = load_image(r'./images/Camembert.png')
             st.markdown(f"<h4 style='text-align: left; font-style: italic;'>Konvoo Project 2022</h4>",
                         unsafe_allow_html=True)
             with st.container():
@@ -180,13 +180,13 @@ def main():
 
             with col1:
                 if st.button('Read the presentation',key='2'):
-                    show_pdf('./KONVO_PROJECT.pdf')
+                    show_pdf(r'./KONVO_PROJECT.pdf')
 
             with col2:
                 st.button('Close the presentation',key='3')
 
             with col3:
-                with open("./KONVO_PROJECT.pdf", "rb") as pdf_file:
+                with open(r"./KONVO_PROJECT.pdf", "rb") as pdf_file:
                     PDFbyte = pdf_file.read()
                 st.download_button(label="Download", key='4',
                         data=PDFbyte,
@@ -196,26 +196,36 @@ def main():
 
             for text in ["How do you find this presentation ?"]:
                 response = st_text_rater(text=text, key='5')
-     
 
 
-            st.markdown('---')
-            readme = read_markdown_file(r"./README.md")
-            st.markdown(f'<p class="font">{readme}</p>', unsafe_allow_html=True)
+        elif topic == "Overview":
+            # st.markdown('---')
+            with st.container():
+                left, right = st.columns([0.6, 0.4])
+                with left:
+                    readme = read_markdown_file(r"./README.md")
+                    st.markdown(f'<p class="font">{readme}</p>',
+                                unsafe_allow_html=True)
+
+                with right:
+                    readme = read_markdown_file(r"./image_overview.md")
+                    st.markdown(f'<p class="font">{readme}</p>',
+                                unsafe_allow_html=True)
 
 
 
         elif topic == "Web Scraping":
-            st.info('TO DO: Konvoo Web Scraping: doctissimo.fr !!')
-
-            st.write('___')
-
-            st.info('TO DO: World bank data scraping !!')
+            proj_img = load_image(r'./images/Web-Scraping.png')
+            st.image(proj_img, width=800)
+            st.info('Update is coming soon !!')
 
 
 
         elif topic == "Text Summary":
-            st.info('TO DO : Update is coming soon !!')
+            proj_schema = load_image(r'./images/summarier_pipeline.jpg')
+            st.image(proj_schema, width=800)
+
+            st.info('Update is coming soon !!')
 
 
 
@@ -250,4 +260,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

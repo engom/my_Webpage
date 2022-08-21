@@ -222,7 +222,7 @@ def main():
                     st.image(Rlogo, width=100)
                     st.write('---')
 
-                    st.text('FRAMEWORKS')
+                    st.text('DL FRAMEWORKS')
                     TensorFlow_logo = load_image(r'./images/TensorFlowLogo.png')
                     st.image(TensorFlow_logo, width=130)
                     st.text('')
@@ -235,14 +235,16 @@ def main():
                     st.image(PyTorch_logo, width=150)
                     st.text('')
 
+                    st.text('CLOUD')
                     aws_logo = load_image(r'./images/aws_logo.png')
                     st.image(aws_logo, width=130)
                     st.text('')
 
                     docker_logo = load_image(r'./images/docker-logo.png')
                     st.image(docker_logo, width=150)
-                    st.text('')
+                    st.write('---')
 
+                    st.text('ML FRAMEWORKS')
                     MLflow_logo = load_image(r'./images/MLFlow-logo.png')
                     st.image(MLflow_logo, width=150)
                     st.text('')

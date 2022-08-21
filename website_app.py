@@ -201,7 +201,7 @@ def main():
         elif topic == "Overview":
             # st.markdown('---')
             with st.container():
-                left, right = st.columns([0.75, 0.25])
+                left, ce, right = st.columns([0.7, 0.05, 0.25])
                 with left:
                     readme = read_markdown_file(r"./README.md")
                     st.markdown(f'<p class="font">{readme}</p>',

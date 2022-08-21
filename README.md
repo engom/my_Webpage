@@ -3,6 +3,7 @@ PROJECT OVERVIEW
 ## Main projects overview:
 Elhadji's personal website to showcase data science work.
 
+---
 - *DSTI:* **Konvoo Project** :
 
   - **Tools:** `Python` - `Jupyter-lab` - `Atom`
@@ -31,26 +32,30 @@ Elhadji's personal website to showcase data science work.
       - `EC2`
       - `Docker`
       - `MLflow`
+---
 
 - OIF: **Web Scraping Project** :
-  - `Selenium`
-  - `Streamlit`
+  - Toolbox:
+    - `Selenium`
+    - `Streamlit`
+---
 
 - OIF: **Text Summarization Project** :
-  - **BART**: CamemBERT - FauBERT - BARThez
-  - `spaCy`
-  - `Streamlit`
+  - Toolbox:
+      - **BART**: CamemBERT - FauBERT - BARThez
+      - `spaCy`
+      - `Streamlit`
+
+---
 
 - DSTI: **Advanced Statistics for Machine Learning**
 
-  - **Tool** : `R`  & `RStudio`
-
+  - Toolbox: : `R`  & `RStudio`
   - **Linear Regression Challenge**:
     - Preprocessing:
       - Handle the missing values: `missMDA`
 
     - **Ordinary Least Square (OLS)**
-
     - __Variables/features selection__ :
       - Step by step method:
         - `step`
@@ -76,6 +81,8 @@ Elhadji's personal website to showcase data science work.
   You can find the explanation of the variables:
   [link](https://data.world/exercises/linear-regression-exercise-1/workspace/file?filename=cancer_reg.csv).
 
+---
+
   - OIF: **LE FAREX WEB** :
     - Toolbox:
       - `WorlCloup`
@@ -84,3 +91,4 @@ Elhadji's personal website to showcase data science work.
 
     - Schema:
     ![farex](https://github.com/engom/my_Webpage/raw/main/farex.png)
+---

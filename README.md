@@ -3,9 +3,7 @@ PROJECT OVERVIEW
 ## Main projects overview:
 Elhadji's personal website to showcase data science work.
 
-### Data Science Toolbox:
-
-- **DSTI:** _**Konvo project**_ :
+- *DSTI:* **Konvoo Project** :
 
   - **Tools:** `Python` - `Jupyter-lab` - `Atom`
 
@@ -34,18 +32,18 @@ Elhadji's personal website to showcase data science work.
       - `Docker`
       - `MLflow`
 
-- OIF: _**Web scraping project**_ :
+- OIF: **Web Scraping Project** :
   - `Selenium`
   - `Streamlit`
 
-- OIF: **Text summarizer project** :
+- OIF: **Text Summarization Project** :
   - **BART**: CamemBERT, FauBERT, BARThez
   - `spaCy`
   - `Streamlit`
 
 - DSTI: **Advanced Statistics for Machine Learning**
 
-  - **Tool** : `R`  
+  - **Tool** : `R`  & `RStudio`
 
   - **Linear Regression Challenge**:
     - Preprocessing:
@@ -78,7 +76,7 @@ Elhadji's personal website to showcase data science work.
   You can find the explanation of the variables:
   [link](https://data.world/exercises/linear-regression-exercise-1/workspace/file?filename=cancer_reg.csv).
 
-  - OIF: **FAREX digital project** :
+  - OIF: **LE FAREX WEB** :
     - `WorlCloup`
     - `spaCy`
     - `Streamlit`

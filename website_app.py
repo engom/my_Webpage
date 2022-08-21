@@ -201,16 +201,68 @@ def main():
         elif topic == "Overview":
             # st.markdown('---')
             with st.container():
-                left, right = st.columns([0.6, 0.4])
+                left, right = st.columns([0.8, 0.2])
                 with left:
                     readme = read_markdown_file(r"./README.md")
                     st.markdown(f'<p class="font">{readme}</p>',
                                 unsafe_allow_html=True)
 
                 with right:
-                    readme = read_markdown_file(r"./image_overview.md")
-                    st.markdown(f'<p class="font">{readme}</p>',
-                                unsafe_allow_html=True)
+                    st.text('FRAMEWORKS')
+                    st.text('')
+
+                    python = load_image(r'./images/Python_logo.png')
+                    st.image(python, width=150)
+                    st.text('')
+
+                    sql_logo = load_image(r'./images/sql_logo.png')
+                    st.image(sql_logo, width=130)
+                    st.text('')
+
+                    Rlogo = load_image(r'./images/Rlogo.png')
+                    st.image(Rlogo, width=100)
+                    st.text('')
+
+                    TensorFlow_logo = load_image(r'./images/TensorFlowLogo.png')
+                    st.image(TensorFlow_logo, width=130)
+                    st.text('')
+
+                    keras_logo = load_image(r'./images/keras-python.png')
+                    st.image(keras_logo, width=150)
+                    st.text('')
+
+                    PyTorch_logo = load_image(r'./images/PyTorch_logo.png')
+                    st.image(PyTorch_logo, width=150)
+                    st.text('')
+
+                    aws_logo = load_image(r'./images/aws_logo.png')
+                    st.image(aws_logo, width=130)
+                    st.text('')
+
+                    docker_logo = load_image(r'./images/docker-logo.png')
+                    st.image(docker_logo, width=150)
+                    st.text('')
+
+                    MLflow_logo = load_image(r'./images/MLFlow-logo.png')
+                    st.image(MLflow_logo, width=150)
+                    st.text('')
+
+                    st_logo = load_image(r'./images/streamlit-logo.png')
+                    st.image(st_logo, width=160)
+                    st.text('')
+
+                    github_logo = load_image(r'./images/github-logo.png')
+                    st.image(github_logo, width=150)
+                    st.text('')
+
+                    dvc_logo = load_image(r'./images/dvc_logo.png')
+                    st.image(dvc_logo, width=150)
+                    st.text('')
+
+                    lab_logo = load_image(r'./images/lab_logo.png')
+                    st.image(lab_logo, width=150)
+                    st.text('')
+
 
 
 

@@ -205,7 +205,7 @@ def main():
         elif topic == "Overview":
             # st.markdown('---')
             with st.container():
-                left, ce, right = st.columns([0.7, 0.05, 0.25])
+                left, ce, right = st.columns([0.6, 0.1, 0.3])
                 with left:
                     readme = read_markdown_file(r"./README.md")
                     st.markdown(f'<p class="font">{readme}</p>',
@@ -213,17 +213,34 @@ def main():
 
                 with right:
                     st.text('RROGRAMMING')
-
                     python = load_image(r'./images/Python_logo.png')
                     st.image(python, width=150)
                     st.text('')
 
-                    sql_logo = load_image(r'./images/sql_logo.png')
-                    st.image(sql_logo, width=130)
-                    st.text('')
-
                     Rlogo = load_image(r'./images/Rlogo.png')
                     st.image(Rlogo, width=100)
+                    st.write('---')
+
+                    st.text('DATABASE')
+                    sql_logo = load_image(r'./images/sql_logo.png')
+                    st.image(sql_logo, width=140, caption='SQL')
+                    st.text('')
+
+                    mysql_logo = load_image(r'./images/mysql-logo.png')
+                    st.image(mysql_logo, width=140, caption='SQL')
+                    st.text('')
+
+                    Neo4j_logo = load_image(r'./images/Neo4j-logo_color.png')
+                    st.image(Neo4j_logo, width=140, caption='NoSQL')
+                    st.write('---')
+
+                    st.text('CLOUD - DOCKER')
+                    aws_logo = load_image(r'./images/aws_logo.png')
+                    st.image(aws_logo, width=130)
+                    st.text('')
+
+                    docker_logo = load_image(r'./images/docker-logo.png')
+                    st.image(docker_logo, width=150)
                     st.write('---')
 
                     st.text('DL FRAMEWORKS')
@@ -237,15 +254,6 @@ def main():
 
                     PyTorch_logo = load_image(r'./images/PyTorch_logo.png')
                     st.image(PyTorch_logo, width=150)
-                    st.text('')
-
-                    st.text('CLOUD')
-                    aws_logo = load_image(r'./images/aws_logo.png')
-                    st.image(aws_logo, width=130)
-                    st.text('')
-
-                    docker_logo = load_image(r'./images/docker-logo.png')
-                    st.image(docker_logo, width=150)
                     st.write('---')
 
                     st.text('ML FRAMEWORKS')

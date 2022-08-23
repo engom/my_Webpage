@@ -1,20 +1,24 @@
+#!/usr/bin/python
+
 import streamlit as st
-from pathlib import Path
-#from streamlit_option_menu import option_menu
 from streamlit_option_menu import option_menu
-#import streamlit.components.v1 as html
+from streamlit_text_rating.st_text_rater import st_text_rater
+
+from pathlib import Path
 from  PIL import Image
 import numpy as np
 import pandas as pd
-#import streamlit.components.v1 as components
 import base64
-from streamlit_text_rating.st_text_rater import st_text_rater
+
+################################################################
 
 # -------------- SETTINGS --------------
 page_title = "Elhadji Ngom's Webpage \n\n 📍 WELCOME 📍"
 page_icon = ":earth_africa:"  # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
-cv_name = 'CV-Elhadji-Ngom.pdf'
 layout = "wide" # "centered"
+
+# --------------------------------------
+cv_name = 'CV-Elhadji-Ngom.pdf'
 # --------------------------------------
 
 st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
@@ -78,9 +82,9 @@ def load_image(image_file):
 def main():
     # -------- MENU SIDE BAR ----------
     with st.sidebar:
-        choose = option_menu("Main Menu", ["About", "Projects", "Contact"],
-                             icons=['house', 'bar-chart-line','person lines fill'],
-                             menu_icon="list",# default_index=0, #,"Apps" ,'app-indicator'
+        choose = option_menu("Main Menu", ["About", "Projects", "Apps", "Contact"],
+                             icons=['house', 'bar-chart-line', 'app-indicator', 'person lines fill'],
+                             menu_icon="list", default_index=0,
                              styles={
             "container": {"padding": "5!important", "background-color": "#fafafa"}, # "#fafafa"
             "icon": {"color": "blue", "font-size": "25px"},
@@ -135,7 +139,7 @@ def main():
         st.header('')
         linkedin_p = 'To read more about her profile on the social media.'
         st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
-        st.image(profile, width=800)
+        st.image(profile, width=650)
         st.info("Please visit her Linkedin page at :link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")
         st.info("Please visit her Apec page at :link:: https://www.apec.fr/candidat/mon-espace.html#/")
         st.info("Please visit her github page at :link:: https://github.com/engom")
@@ -277,16 +281,53 @@ def main():
 
         elif topic == "Text Summary":
             proj_schema = load_image(r'./images/summarier_pipeline.jpg')
-            st.image(proj_schema, width=800, caption='Text Summarizer Pipeline (spaCy + BART) - By Elhadji')
+            st.image(proj_schema,
+                     width=800,
+                     caption='Text Summarizer Pipeline (spaCy + BART) - By Elhadji')
 
             st.info('Update is coming soon !!')
 
 
 
-    #elif choose == "Apps":
+    elif choose == "Apps":
         # ------- TO DO -----
-    #    st.write('TO DO !')
+        # Create and share beautiful images of your source code
+        # >>> https://carbon.now.sh/
+        st.markdown("""<h3 style='text-align: center; font-style: italic;'>
+                    Apps deployed
+                    </h3>""",
+                    unsafe_allow_html=True)
 
+
+        st.markdown("""<h5 style='text-align: center; font-style: italic;'>
+                    Text Summarizer app: source code header
+                    </h5>""",
+                    unsafe_allow_html=True)
+        with st.container():
+            app_img = load_image(r'images/summary_app.png')
+            st.image(app_img,
+                     width=600,
+                     caption="By Elhadji")
+
+        st.markdown("""<h5 style='text-align: center; font-style: italic;'>
+                    Profile Webpage: source code header
+                    </h5>""",
+                    unsafe_allow_html=True)
+        with st.container():
+            app_img = load_image(r'images/carbon.png')
+            st.image(app_img,
+                     width=600,
+                     caption="By Elhadji")
+
+        st.markdown("""<h5 style='text-align: center; font-style: italic;'>
+                    Web Scraping app: source code header
+                    </h5>""",
+                    unsafe_allow_html=True)
+        with st.container():
+            app_img = load_image(r'images/scraper_app.png')
+            st.image(app_img,
+                     width=600,
+                     caption="By Elhadji")
 
 
     elif choose == "Contact":

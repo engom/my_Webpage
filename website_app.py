@@ -74,7 +74,7 @@ def read_markdown_file(markdown_file):
     return Path(markdown_file).read_text()
 
 # ----------- IMAGE LOADER -----------------
-@st.cache(allow_output_mutation=True)
+#@st.cache(allow_output_mutation=True)
 def load_image(image_file):
 	img = Image.open(image_file)
 	return img

@@ -90,5 +90,5 @@ Elhadji's personal website to showcase data science work.
       - `Streamlit`
 
     - Schema:
-    ![farex](https://github.com/engom/my_Webpage/blob/main/images/farex.png)
+    [farex](https://github.com/engom/my_Webpage/blob/main/images/farex.png)
 ---

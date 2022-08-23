@@ -94,7 +94,7 @@ def main():
         )
 
     logo = load_image(r'./images/data_science.png')
-    profile = load_image(r'./images/my_in_profile.png')
+    profile = load_image(r"./images/my_in_profile.png")
     if choose == "About":
         col1, col2 = st.columns([0.8, 0.2])
         with col1:               # To display the header text using css style
@@ -139,7 +139,7 @@ def main():
         st.header('')
         linkedin_p = 'To read more about her profile on the social media.'
         st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
-        st.image(profile, width=650)
+        st.image(profile, width=800)
         st.info("Please visit her Linkedin page at :link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")
         st.info("Please visit her Apec page at :link:: https://www.apec.fr/candidat/mon-espace.html#/")
         st.info("Please visit her github page at :link:: https://github.com/engom")
@@ -306,7 +306,7 @@ def main():
         with st.container():
             app_img = load_image(r'images/summary_app.png')
             st.image(app_img,
-                     width=600,
+                     width=800,
                      caption="By Elhadji")
 
         st.markdown("""<h5 style='text-align: center; font-style: italic;'>
@@ -316,7 +316,7 @@ def main():
         with st.container():
             app_img = load_image(r'images/carbon.png')
             st.image(app_img,
-                     width=600,
+                     width=800,
                      caption="By Elhadji")
 
         st.markdown("""<h5 style='text-align: center; font-style: italic;'>
@@ -326,7 +326,7 @@ def main():
         with st.container():
             app_img = load_image(r'images/scraper_app.png')
             st.image(app_img,
-                     width=600,
+                     width=800,
                      caption="By Elhadji")
 
 

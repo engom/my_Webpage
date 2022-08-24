@@ -249,7 +249,7 @@ def main():
                              caption="Container Orchestration")
                     st.write('---')
 
-                    st.text('DEEP L. FRAMEWORKS')
+                    st.text('DEEP LEARNING FRAMEWORKS')
                     TensorFlow_logo = load_image(r'./images/TensorFlowLogo.png')
                     st.image(TensorFlow_logo, width=130)
                     st.text('')
@@ -262,7 +262,7 @@ def main():
                     st.image(PyTorch_logo, width=150)
                     st.write('---')
 
-                    st.text('MACHINE L. FRAMEWORKS')
+                    st.text('MACHINE LEARNING FRAMEWORKS')
                     MLflow_logo = load_image(r'./images/MLFlow-logo.png')
                     st.image(MLflow_logo, width=150)
                     st.text('')

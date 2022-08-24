@@ -213,7 +213,7 @@ def main():
 
                 with right:
                     st.text('RROGRAMMING')
-                    python = load_image(r'./images/python-logo.jpg')
+                    python = load_image(r'./images/python-logo.png')
                     st.image(python, width=130)
                     st.text('')
 

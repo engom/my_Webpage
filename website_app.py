@@ -212,7 +212,7 @@ def main():
                                 unsafe_allow_html=True)
 
                 with right:
-                    st.text('RROGRAMMING')
+                    st.text('RROGRAMMING TOOL')
                     python = load_image(r'./images/Python_logo.png')
                     st.image(python, width=160)
                     st.text('')
@@ -221,7 +221,7 @@ def main():
                     st.image(Rlogo, width=100)
                     st.write('---')
 
-                    st.text('DATABASE')
+                    st.text('DATABASE SERVICE')
                     sql_logo = load_image(r'./images/sql_logo.png')
                     st.image(sql_logo, width=140, caption='SQL')
                     st.text('')

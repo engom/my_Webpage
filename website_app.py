@@ -243,6 +243,12 @@ def main():
                     st.image(docker_logo, width=150, caption="Virtualization")
                     st.write('---')
 
+                    kuber_logo = load_image(r'./images/kubernetes-logo.png')
+                    st.image(kuber_logo,
+                             width=150,
+                             caption="Container Orchestration")
+                    st.write('---')
+
                     st.text('DL FRAMEWORKS')
                     TensorFlow_logo = load_image(r'./images/TensorFlowLogo.png')
                     st.image(TensorFlow_logo, width=130)

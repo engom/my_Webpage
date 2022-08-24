@@ -223,15 +223,15 @@ def main():
 
                     st.text('DATABASE SERVICE')
                     sql_logo = load_image(r'./images/sql_logo.png')
-                    st.image(sql_logo, width=140, caption='SQL')
+                    st.image(sql_logo, width=150, caption='SQL')
                     st.text('')
 
                     mysql_logo = load_image(r'./images/mysql-logo.png')
-                    st.image(mysql_logo, width=140, caption='SQL')
+                    st.image(mysql_logo, width=150, caption='SQL')
                     st.text('')
 
                     Neo4j_logo = load_image(r'./images/Neo4j-logo_color.png')
-                    st.image(Neo4j_logo, width=140, caption='NoSQL')
+                    st.image(Neo4j_logo, width=150, caption='NoSQL')
                     st.write('---')
 
                     st.text('CLOUD SERVICE & DOCKER')

@@ -236,11 +236,11 @@ def main():
 
                     st.text('CLOUD SERVICE & DOCKER')
                     aws_logo = load_image(r'./images/aws_logo.png')
-                    st.image(aws_logo, width=130, caption="Cloud Computing")
+                    st.image(aws_logo, width=160, caption="Cloud Computing")
                     st.text('')
 
                     docker_logo = load_image(r'./images/docker-logo.png')
-                    st.image(docker_logo, width=150, caption="Virtualization")
+                    st.image(docker_logo, width=160, caption="Virtualization")
                     st.write('')
 
                     kuber_logo = load_image(r'./images/kubernetes-logo.png')

@@ -51,7 +51,7 @@ hide_st_style = """
                 }
             footer:after {
                 visibility: visible;
-                content: 'Copyright @2022: Ngom | Streamlit';
+                content: 'Copyright: Ngom | Streamlit 2022';
                 postion: relative;
                 diplay: block;
                 color: tomato;

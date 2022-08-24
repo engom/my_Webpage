@@ -234,7 +234,7 @@ def main():
                     st.image(Neo4j_logo, width=140, caption='NoSQL')
                     st.write('---')
 
-                    st.text('CLOUD - DOCKER')
+                    st.text('CLOUD SERVICE & DOCKER')
                     aws_logo = load_image(r'./images/aws_logo.png')
                     st.image(aws_logo, width=130, caption="Cloud Computing")
                     st.text('')
@@ -249,7 +249,7 @@ def main():
                              caption="Container Orchestration")
                     st.write('---')
 
-                    st.text('DL FRAMEWORKS')
+                    st.text('DEEP L. FRAMEWORKS')
                     TensorFlow_logo = load_image(r'./images/TensorFlowLogo.png')
                     st.image(TensorFlow_logo, width=130)
                     st.text('')
@@ -262,7 +262,7 @@ def main():
                     st.image(PyTorch_logo, width=150)
                     st.write('---')
 
-                    st.text('ML FRAMEWORKS')
+                    st.text('MACHINE L. FRAMEWORKS')
                     MLflow_logo = load_image(r'./images/MLFlow-logo.png')
                     st.image(MLflow_logo, width=150)
                     st.text('')

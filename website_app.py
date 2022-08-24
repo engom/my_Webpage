@@ -245,7 +245,7 @@ def main():
 
                     kuber_logo = load_image(r'./images/kubernetes-logo.png')
                     st.image(kuber_logo,
-                             width=150,
+                             width=160,
                              caption="Container Orchestration")
                     st.write('---')
 

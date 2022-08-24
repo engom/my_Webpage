@@ -205,7 +205,7 @@ def main():
         elif topic == "Overview":
             # st.markdown('---')
             with st.container():
-                left, ce, right = st.columns([0.6, 0.1, 0.3])
+                left, ce, right = st.columns([0.6, 0.05, 0.35])
                 with left:
                     readme = read_markdown_file(r"./README.md")
                     st.markdown(f'<p class="font">{readme}</p>',
@@ -241,7 +241,7 @@ def main():
 
                     docker_logo = load_image(r'./images/docker-logo.png')
                     st.image(docker_logo, width=150, caption="Virtualization")
-                    st.write('---')
+                    st.write('')
 
                     kuber_logo = load_image(r'./images/kubernetes-logo.png')
                     st.image(kuber_logo,

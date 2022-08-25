@@ -303,7 +303,20 @@ def main():
                      width=800,
                      caption='Text Summarizer Pipeline (spaCy + BART) - By Elhadji')
 
-            st.info('Update is coming soon !!')
+            st.info('Text Summarization with spaCy & Transformers')
+            description = """
+            Summarization is the task of producing a shorter version of a document while preserving its important information.
+            Some models can extract text from the original input (extractive summary), while other models can generate entirely new text (abstractive summary).
+            Some parts of this summary may not even appear in the original text.
+
+            We used spaCy Pipeline in the preprocessing step to extract the most import part the orginal text.
+            The preprocessed result goes to Transformers based model that has attention mechanism to human-like final summary.
+            """
+            st.markdown(""" <style> .font {
+            font-size:24px ; font-family: 'Black'; color: #FFFFF;}
+            </style> """, unsafe_allow_html=True)
+            st.markdown(f'<p class="font">{description}</p>', unsafe_allow_html=True)
+
 
 
 

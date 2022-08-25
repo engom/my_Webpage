@@ -212,16 +212,20 @@ def main():
                                 unsafe_allow_html=True)
 
                 with right:
-                    st.text('RROGRAMMING TOOL')
+                    st.text('RROGRAMMING TOOLS')
                     python = load_image(r'./images/Python_logo.png')
-                    st.image(python, width=160)
+                    st.image(python, width=160, caption='Open source')
                     st.text('')
 
                     Rlogo = load_image(r'./images/Rlogo.png')
-                    st.image(Rlogo, width=100)
+                    st.image(Rlogo, width=100, caption='Open source')
+                    st.text('')
+
+                    SAS_logo = load_image(r'./images/SAS_logo.png')
+                    st.image(SAS_logo, width=100, caption='Under license')
                     st.write('---')
 
-                    st.text('DATABASE SERVICE')
+                    st.text('DATABASE SERVICES')
                     sql_logo = load_image(r'./images/sql_logo.png')
                     st.image(sql_logo, width=150, caption='SQL')
                     st.text('')
@@ -234,7 +238,7 @@ def main():
                     st.image(Neo4j_logo, width=150, caption='NoSQL')
                     st.write('---')
 
-                    st.text('CLOUD SERVICE & DOCKER')
+                    st.text('CLOUD SERVICES & DOCKER')
                     aws_logo = load_image(r'./images/aws_logo.png')
                     st.image(aws_logo, width=160, caption="Cloud Computing")
                     st.text('')

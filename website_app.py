@@ -218,11 +218,11 @@ def main():
                     st.text('')
 
                     Rlogo = load_image(r'./images/Rlogo.png')
-                    st.image(Rlogo, width=100, caption='Open source')
+                    st.image(Rlogo, width=130, caption='Open source')
                     st.text('')
 
                     SAS_logo = load_image(r'./images/SAS_logo.png')
-                    st.image(SAS_logo, width=100, caption='Under license')
+                    st.image(SAS_logo, width=150, caption='Under license')
                     st.write('---')
 
                     st.text('DATABASE SERVICES')

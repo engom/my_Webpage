@@ -146,8 +146,8 @@ def main():
 
 
     elif choose == "Projects":
-        topic = option_menu(None, ["Overview", "Konvoo", "Web Scraping", "Text Summary"],
-                         icons=['gear-fill', 'gear', 'cloud-arrow-down', 'display'],
+        topic = option_menu(None, ["Overview", "Konvoo", "Text Summary", "Web Scraping"],
+                         icons=['gear-fill', 'gear', 'display', 'cloud-arrow-down'],
                          menu_icon="list", default_index=0,
                          styles={
         "container": {"padding": "5!important", "background-color": "#95A5A6"}, # "#fafafa"
@@ -287,16 +287,6 @@ def main():
                     st.image(lab_logo, width=150)
                     st.text('')
 
-
-
-
-        elif topic == "Web Scraping":
-            proj_img = load_image(r'./images/Web-Scraping.png')
-            st.image(proj_img, width=800)
-            st.info('Update is coming soon !!')
-
-
-
         elif topic == "Text Summary":
             proj_schema = load_image(r'./images/summarier_pipeline.jpg')
             st.image(proj_schema,
@@ -319,7 +309,10 @@ def main():
             </style> """, unsafe_allow_html=True)
             st.markdown(f'<p class="font">{description}</p>', unsafe_allow_html=True)
 
-
+        elif topic == "Web Scraping":
+            proj_img = load_image(r'./images/Web-Scraping.png')
+            st.image(proj_img, width=800)
+            st.info('Update is coming soon !!')
 
 
     elif choose == "Apps":

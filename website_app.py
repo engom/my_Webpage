@@ -315,7 +315,7 @@ def main():
             Thus, we got a final to human-like summary.
             """
             st.markdown(""" <style> .font {
-            font-size:18px ; font-family: 'Black'; color: #FFFFF;}
+            font-size:20px ; font-family: 'Black'; color: #FFFFF;}
             </style> """, unsafe_allow_html=True)
             st.markdown(f'<p class="font">{description}</p>', unsafe_allow_html=True)
 

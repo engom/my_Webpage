@@ -190,7 +190,8 @@ def main():
             c0, ce, c1 = st.columns(3)
             with ce:
                 st.image(virtualfile,
-                         caption="Please visit his Linkedin profile")
+                    width=250,
+                    caption="Please visit his Linkedin profile. Scan me!")
 
             st.success('GITHUB')
             st.info(":link::\n https://github.com/engom")
@@ -201,7 +202,8 @@ def main():
             c0, ce, c1 = st.columns(3)
             with ce:
                 st.image(virtualfile,
-                         caption="Please visit his github page")
+                         width=250,
+                         caption="Please visit his github page. Scan me!")
 
             st.success('APEC')
             st.info(":link:: https://www.apec.fr/candidat/mon-espace.html#/")
@@ -212,7 +214,8 @@ def main():
             c0, ce, c1 = st.columns(3)
             with ce:
                 st.image(virtualfile,
-                         caption="Please visit his Apec page")
+                         width=250,
+                         caption="Please visit his Apec page. Scan me!")
 
     elif choose == "Projects":
         topic = option_menu(None, ["Overview", "Konvoo", "Text Summary", "Web Scraping"],

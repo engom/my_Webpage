@@ -9,8 +9,8 @@ from  PIL import Image
 import numpy as np
 import pandas as pd
 import base64
-
-################################################################
+import io
+import qrcode
 
 # -------------- SETTINGS --------------
 page_title = "Elhadji Ngom's Webpage \n\n\n 📍 WELCOME 📍"
@@ -174,14 +174,45 @@ def main():
                     mime='application/octet-stream')
 
         # -------- SOCIAL MEDIA LINKS ----------
-        st.header('')
-        linkedin_p = 'To read more about her profile on Linkedin and gitHub.'
-        st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
-        st.image(profile, width=800)
-        st.info("Please visit her Linkedin page at :link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")
-        st.info("Please visit her Apec page at :link:: https://www.apec.fr/candidat/mon-espace.html#/")
-        st.info("Please visit her github page at :link:: https://github.com/engom")
+        with st.container():
+            st.markdown(f"<h2 style='text-align: center; font-style: italic;'>Social media</h2>",
+                        unsafe_allow_html=True)
+            linkedin_p = 'To read more about his profile on Linkedin and gitHub.'
+            st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
+            st.image(profile, width=800)
 
+            st.success('LINKEDIN')
+            st.info(":link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")
+            url = "https://www.linkedin.com/in/elhadji-ngom-data-ai"
+            img = qrcode.make(url)
+            virtualfile = io.BytesIO()
+            img.save(virtualfile)
+            c0, ce, c1 = st.columns(3)
+            with ce:
+                st.image(virtualfile,
+                         caption="Please visit his Linkedin profile")
+
+            st.success('GITHUB')
+            st.info(":link::\n https://github.com/engom")
+            url = "https://github.com/engom"
+            img = qrcode.make(url)
+            virtualfile = io.BytesIO()
+            img.save(virtualfile)
+            c0, ce, c1 = st.columns(3)
+            with ce:
+                st.image(virtualfile,
+                         caption="Please visit his github page")
+
+            st.success('APEC')
+            st.info(":link:: https://www.apec.fr/candidat/mon-espace.html#/")
+            url = "https://www.apec.fr/candidat/mon-espace.html#/"
+            img = qrcode.make(url)
+            virtualfile = io.BytesIO()
+            img.save(virtualfile)
+            c0, ce, c1 = st.columns(3)
+            with ce:
+                st.image(virtualfile,
+                         caption="Please visit his Apec page")
 
     elif choose == "Projects":
         topic = option_menu(None, ["Overview", "Konvoo", "Text Summary", "Web Scraping"],

@@ -13,7 +13,7 @@ import base64
 ################################################################
 
 # -------------- SETTINGS --------------
-page_title = "Elhadji Ngom's Webpage \n\n 📍 WELCOME 📍"
+page_title = "Elhadji Ngom's Webpage \n\n\n 📍 WELCOME 📍"
 page_icon = ":earth_africa:"  # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 layout = "wide" # "centered"
 
@@ -27,7 +27,7 @@ st.markdown(f"<h1 style='text-align: center; color: #7D3C98;'>{page_title}</h1>"
 #st.write('---')
 
 def _max_width_():
-    max_width_str = f"max-width: 1450px;"
+    max_width_str = f"max-width: 1500px;"
     st.markdown(
         f"""
     <style>
@@ -79,6 +79,38 @@ def load_image(image_file):
 	img = Image.open(image_file)
 	return img
 
+# ------------ APP BACKGROUND --------------
+@st.experimental_memo
+def get_img_as_base64(file):
+    with open(file, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+img = get_img_as_base64("./images/ml-image.jpeg")
+img_menu = get_img_as_base64("./images/marian.jpg")
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+background-image: url("data:image/png;base64,{img}");
+background-size: cover;
+background-position: top right;
+-- background-repeat: no-repeat;
+-- background-attachment: fixed;
+}}
+[data-testid="stSidebar"] > div:first-child {{
+background-image: url("data:image/png;base64,{img_menu}");
+background-position: top left;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}}
+[data-testid="stHeader"] {{
+background: rgba(0,0,0,0);
+}}
+</style>
+"""
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+################## MAIN #####################
 def main():
     # -------- MENU SIDE BAR ----------
     with st.sidebar:
@@ -101,16 +133,22 @@ def main():
             st.markdown(""" <style> .font {
             font-size:35px ; font-family: 'Cooper Black'; color: #FF9633;}
             </style> """, unsafe_allow_html=True)
-            job_title = "Data scientist | Python Engineer"
+            job_title = "Data scientist | ML Engineer"
             st.markdown(f"<h2 class='font'>{job_title}</h2>", unsafe_allow_html=True)
         with col2:               # To display brand log
             st.image(logo, width=130)
         st.write('---')
 
         # --------- ABOUT ME ------------------
-        st.markdown(f"<h2 style='text-align: center; font-style: italic;'>About the creator :</h2>",
+        st.markdown(f"<h2 style='text-align: center; font-style: italic;'> About the creator :</h2>",
                     unsafe_allow_html=True)
-        description = "Elhadji is a Data science practitioner, NLP enthusiast, and Python Engineer. He run data science projects with Python or R to deal with NLP applications and/or Object Detection problems. He works on data visualization, builds Streamlit app, etc. He is also a football amateur who likes pop music.\n\n"
+        description = """
+        Elhadji is a Junior Data science practitioner, NLP enthusiast,
+        and Python Engineer. He run data science projects with Python or R
+        to deal with NLP applications and/or Object Detection problems.
+        He works on data visualization, builds Streamlit app, etc.
+        He is also a football amateur who likes pop music.
+        """
         st.markdown(""" <style> .font_par {
         font-size:24px ; font-family: 'Black'; color: #FFFFF; font-style: oblique;}
         </style> """, unsafe_allow_html=True)
@@ -137,7 +175,7 @@ def main():
 
         # -------- SOCIAL MEDIA LINKS ----------
         st.header('')
-        linkedin_p = 'To read more about her profile on the social media.'
+        linkedin_p = 'To read more about her profile on Linkedin and gitHub.'
         st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
         st.image(profile, width=800)
         st.info("Please visit her Linkedin page at :link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")

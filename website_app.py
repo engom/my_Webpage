@@ -433,31 +433,40 @@ def main():
                     Text Summarizer app: source code header
                     </h5>""",
                     unsafe_allow_html=True)
+
         with st.container():
-            app_img = load_image(r'images/summary_app.png')
-            st.image(app_img,
-                     width=700,
-                     caption="By Elhadji")
+            col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
+            with col2:
+                app_img = load_image(r'images/summary_app.png')
+                st.image(app_img,
+                         width=700,
+                         caption="Image By Elhadji")
 
         st.markdown("""<h5 style='text-align: center; font-style: italic;'>
                     Profile Webpage: source code header
                     </h5>""",
                     unsafe_allow_html=True)
+
         with st.container():
-            app_img = load_image(r'images/carbon.png')
-            st.image(app_img,
-                     width=700,
-                     caption="By Elhadji")
+            col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
+            with col2:
+                app_img = load_image(r'images/carbon.png')
+                st.image(app_img,
+                         width=700,
+                         caption="Image By Elhadji")
 
         st.markdown("""<h5 style='text-align: center; font-style: italic;'>
                     Web Scraping app: source code header
                     </h5>""",
                     unsafe_allow_html=True)
+
         with st.container():
-            app_img = load_image(r'images/scraper_app.png')
-            st.image(app_img,
-                     width=700,
-                     caption="By Elhadji")
+            col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
+            with col2:
+                app_img = load_image(r'images/scraper_app.png')
+                st.image(app_img,
+                         width=700,
+                         caption="Image By Elhadji")
 
 
     elif choose == "Contact":

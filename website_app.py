@@ -199,7 +199,10 @@ def main():
                         unsafe_allow_html=True)
             linkedin_p = "Read more about Elhadji's profile on Linkedin and GitHub."
             st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
-            st.image(profile, width=650)
+            with st.container():
+                col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
+                with col2:
+                    st.image(profile, width=700)
 
             st.success('LINKEDIN')
             st.info(":link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")

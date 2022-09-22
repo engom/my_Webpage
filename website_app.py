@@ -381,9 +381,12 @@ def main():
 
         elif topic == "Text Summary":
             proj_schema = load_image(r'./images/summarier_pipeline.jpg')
-            st.image(proj_schema,
-                     width=800,
-                     caption='Text Summarizer Pipeline (spaCy + BART) - By Elhadji')
+            with st.container():
+                col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
+                with col2:
+                    st.image(proj_schema,
+                             width=700,
+                             caption='Text Summarizer Pipeline (spaCy + BART) - By Elhadji')
 
             st.success('Text Summarization')
             description1 = """

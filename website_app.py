@@ -202,7 +202,7 @@ def main():
             with st.container():
                 col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
                 with col2:
-                    st.image(profile, width=800)
+                    st.image(profile, width=750)
 
             st.success('LINKEDIN')
             st.info(":link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")
@@ -418,7 +418,7 @@ def main():
                 col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
                 with col2:
                     proj_img = load_image(r'./images/Web-Scraping.png')
-                    st.image(proj_img, width=800)
+                    st.image(proj_img, width=750)
             st.info('Update is coming soon !!')
 
 
@@ -442,7 +442,7 @@ def main():
             with col2:
                 app_img = load_image(r'images/summary_app.png')
                 st.image(app_img,
-                         width=800,
+                         width=750,
                          caption="Image By Elhadji")
 
         st.markdown("""<h5 style='text-align: center; font-style: italic;'>
@@ -455,7 +455,7 @@ def main():
             with col2:
                 app_img = load_image(r'images/carbon.png')
                 st.image(app_img,
-                         width=800,
+                         width=750,
                          caption="Image By Elhadji")
 
         st.markdown("""<h5 style='text-align: center; font-style: italic;'>
@@ -468,7 +468,7 @@ def main():
             with col2:
                 app_img = load_image(r'images/scraper_app.png')
                 st.image(app_img,
-                         width=800,
+                         width=750,
                          caption="Image By Elhadji")
 
 

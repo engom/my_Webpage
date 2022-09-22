@@ -365,12 +365,14 @@ def main():
                      width=800,
                      caption='Text Summarizer Pipeline (spaCy + BART) - By Elhadji')
 
-            st.success('Text Summarization with spaCy + Transformers')
-            description = """
+            st.success('Text Summarization')
+            description1 = """
             Summarization is the task of producing a shorter version of a document while preserving its important information.
             Some models can extract text from the original input (extractive summary), while other models can generate entirely new text (abstractive summary).
             Some parts of this summary may not even appear in the original text. We combined these two methodologies into one single summarizer pipeline.
-            We used spaCy pipeline in the pre-processing step to extract the most import part the orginal text.
+            """
+            description2 = """
+            Hence we used spaCy pipeline in the pre-processing step to extract the most import part the orginal text.
             The pre-processed output goes to the transformers based model that has attention mechanism.
             The attention mechanism uses a weighted sum of all of the encoder hidden states to flexibly
             focus the attention of the decoder to the most relevant parts of the input sequence.
@@ -379,7 +381,11 @@ def main():
             st.markdown(""" <style> .font {
             font-size:20px ; font-family: 'Black'; color: #FFFFF;}
             </style> """, unsafe_allow_html=True)
-            st.markdown(f'<p class="font">{description}</p>', unsafe_allow_html=True)
+            st.markdown(f'<p class="font">{description1}</p>',
+                        unsafe_allow_html=True)
+            st.markdown(f'<p class="font">{description2}</p>',
+                        unsafe_allow_html=True)
+            st.info('Tools: spaCy - Transformers - Pytorch - Colab - Jupyterlab - Atom - GitHub')
 
         elif topic == "Web Scraping":
             proj_img = load_image(r'./images/Web-Scraping.png')

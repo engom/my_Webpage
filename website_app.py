@@ -13,32 +13,52 @@ import io
 import qrcode
 
 # -------------- SETTINGS --------------
-page_title = "Elhadji Ngom's Webpage \n\n\n 📍 WELCOME 📍"
-page_icon = ":earth_africa:"  # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
+page_title = "Elhadji Ngom's Webpage \n\n 📍 WELCOME 📍"
+page_icon = ":earth_africa:"
+# emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 layout = "wide" # "centered"
 
 # --------------------------------------
 cv_name = 'CV-Elhadji-Ngom.pdf'
 # --------------------------------------
-
 st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
-st.markdown(f"<h1 style='text-align: center; color: #7D3C98;'>{page_title}</h1>",
-            unsafe_allow_html=True) # #000080
-#st.write('---')
 
 def _max_width_():
-    max_width_str = f"max-width: 1500px;"
+    max_width_str = f"max-width: 1450px;"
     st.markdown(
         f"""
     <style>
     .reportview-container .main .block-container{{
         {max_width_str}
+
     }}
     </style>
     """,
         unsafe_allow_html=True,
     )
 _max_width_()
+
+# Remove whitespace from the top of the page and sidebar
+st.markdown("""
+        <style>
+               .css-18e3th9 {
+                    padding-top: 0rem;
+                    padding-bottom: 2.5rem;
+                    padding-left: 2.5rem;
+                    padding-right: 2.5rem;
+                }
+               .css-1d391kg {
+                    padding-top: 3.5rem;
+                    padding-right: 1rem;
+                    padding-bottom: 3.5rem;
+                    padding-left: 1rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
+
+st.markdown(f"<h1 style='text-align: center; color: #7D3C98;'>{page_title}</h1>",
+            unsafe_allow_html=True) # #000080
+
 
 # --- HIDE STREAMLIT STYLE ---
 hide_st_style = """
@@ -177,9 +197,9 @@ def main():
         with st.container():
             st.markdown(f"<h2 style='text-align: center; font-style: italic;'>Social media</h2>",
                         unsafe_allow_html=True)
-            linkedin_p = 'To read more about his profile on Linkedin and gitHub.'
+            linkedin_p = "Read more about Elhadji's profile on Linkedin and GitHub."
             st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
-            st.image(profile, width=800)
+            st.image(profile, width=650)
 
             st.success('LINKEDIN')
             st.info(":link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")
@@ -191,7 +211,7 @@ def main():
             with ce:
                 st.image(virtualfile,
                     width=250,
-                    caption="Please visit his Linkedin profile. Scan me!")
+                    caption="Please visit his Linkedin profile: scan me!")
 
             st.success('GITHUB')
             st.info(":link::\n https://github.com/engom")
@@ -203,7 +223,7 @@ def main():
             with ce:
                 st.image(virtualfile,
                          width=250,
-                         caption="Please visit his github page. Scan me!")
+                         caption="Please visit his github page: scan me!")
 
             st.success('APEC')
             st.info(":link:: https://www.apec.fr/candidat/mon-espace.html#/")
@@ -215,7 +235,7 @@ def main():
             with ce:
                 st.image(virtualfile,
                          width=250,
-                         caption="Please visit his Apec page. Scan me!")
+                         caption="Please visit his Apec page: scan me!")
 
     elif choose == "Projects":
         topic = option_menu(None, ["Overview", "Konvoo", "Text Summary", "Web Scraping"],
@@ -410,7 +430,7 @@ def main():
         with st.container():
             app_img = load_image(r'images/summary_app.png')
             st.image(app_img,
-                     width=800,
+                     width=700,
                      caption="By Elhadji")
 
         st.markdown("""<h5 style='text-align: center; font-style: italic;'>
@@ -420,7 +440,7 @@ def main():
         with st.container():
             app_img = load_image(r'images/carbon.png')
             st.image(app_img,
-                     width=800,
+                     width=700,
                      caption="By Elhadji")
 
         st.markdown("""<h5 style='text-align: center; font-style: italic;'>
@@ -430,7 +450,7 @@ def main():
         with st.container():
             app_img = load_image(r'images/scraper_app.png')
             st.image(app_img,
-                     width=800,
+                     width=700,
                      caption="By Elhadji")
 
 

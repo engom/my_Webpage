@@ -214,7 +214,7 @@ def main():
             with ce:
                 st.image(virtualfile,
                     width=250,
-                    caption="Please visit his Linkedin profile: scan me!")
+                    caption="Please visit his Linkedin: scan me !")
 
             st.success('GITHUB')
             st.info(":link::\n https://github.com/engom")
@@ -226,7 +226,7 @@ def main():
             with ce:
                 st.image(virtualfile,
                          width=250,
-                         caption="Please visit his github page: scan me!")
+                         caption="Please visit his github: scan me !")
 
             st.success('APEC')
             st.info(":link:: https://www.apec.fr/candidat/mon-espace.html#/")

@@ -74,7 +74,7 @@ hide_st_style = """
                 content: 'Copyright: Ngom | Streamlit 2022';
                 postion: relative;
                 diplay: block;
-                color: tomato;
+                --color: tomato;
                 }
             </style>
             """

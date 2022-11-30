@@ -138,7 +138,7 @@ def main():
                              icons=['house', 'bar-chart-line', 'app-indicator', 'person lines fill'],
                              menu_icon="list", default_index=0,
                              styles={
-            "container": {"padding": "5!important", "background-color": "#fafafa"}, # "#fafafa"
+            "container": {"padding": "5!important", "background-color": "#999999"}, # "#fafafa"
             "icon": {"color": "blue", "font-size": "25px"},
             "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
             "nav-link-selected": {"background-color": "#24A608"},

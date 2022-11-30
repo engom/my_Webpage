@@ -83,12 +83,15 @@ Elhadji's personal website to showcase data science work.
 
 ---
 
-  - OIF: **LE FAREX WEB** :
-    - Toolbox:
-      - `WorlCloup`
-      - `spaCy`
-      - `Streamlit`
+  - OIF: **FAREX WEB** :
 
-    - Schema:
-    [farex](https://github.com/engom/my_Webpage/blob/main/images/farex.png)
+    - Toolbox:
+      - `Sckit-learn`
+      - `WorlCloup`
+      - `spaCy nlp pipeline`
+      - `Streamlit`
+      - `TF-IDF`
+      - `NLTK`
+      - `MySQL`, `SQLite3`
+      - `Docker`
 ---

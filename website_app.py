@@ -249,19 +249,19 @@ def main():
                          caption="Please visit his Apec page: scan me!")
 
     elif choose == "Projects":
-        topic = option_menu(None, ["Overview", "Konvoo", "Text Summary", "Web Scraping"],
+        topic = option_menu(None, ["Overview", "Konvoo-ETP", "Text Summary", "Web Scraping"],
                          icons=['gear-fill', 'gear', 'display', 'cloud-arrow-down'],
                          menu_icon="list", default_index=0,
                          styles={
         "container": {"padding": "5!important", "background-color": "#95A5A6"}, # "#fafafa"
-        "icon": {"color": "orange", "font-size": "20px"},
+        "icon": {"color": "white", "font-size": "20px"},
         "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
         "nav-link-selected": {"background-color": "#566573"}, # "#080000"  #586e75
         },orientation='horizontal'
         )
 
         st.write('')
-        if topic=='Konvoo':
+        if topic=='Konvoo-ETP':
             feature_image1 = load_image(r'./images/konvo_app.jpg')
             feature_image2 = load_image(r'./images/Camembert.png')
             st.markdown(f"<h4 style='text-align: left; font-style: italic;'>Konvoo Project 2022</h4>",
@@ -427,7 +427,7 @@ def main():
                 with col2:
                     proj_img = load_image(r'./images/Web-Scraping.png')
                     st.image(proj_img, width=750)
-            st.info('Update is coming soon !!')
+            # st.info('Update is coming soon !!')
 
 
     elif choose == "Apps":

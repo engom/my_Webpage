@@ -56,7 +56,7 @@ st.markdown("""
         </style>
         """, unsafe_allow_html=True)
 
-st.markdown(f"<h1 style='text-align: center; color: #0000FF;'>{page_title}</h1>",
+st.markdown(f"<h1 style='text-align: center; color: #F39C12;'>{page_title}</h1>",
             unsafe_allow_html=True) # #000080
 
 
@@ -138,7 +138,7 @@ def main():
                              icons=['house', 'bar-chart-line', 'app-indicator', 'person lines fill'],
                              menu_icon="list", default_index=0,
                              styles={
-            "container": {"padding": "5!important", "background-color": "#4D4B48"}, # "#fafafa"
+            "container": {"padding": "5!important", "background-color": "#1c1c1e"}, # "#fafafa"
             "icon": {"color": "blue", "font-size": "25px"},
             "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
             "nav-link-selected": {"background-color": "#24A608"},
@@ -151,7 +151,7 @@ def main():
         col1, col2 = st.columns([0.8, 0.2])
         with col1:               # To display the header text using css style
             st.markdown(""" <style> .font {
-            font-size:35px ; font-family: 'Cooper Black'; color: #0000FF;}
+            font-size:35px ; font-family: 'Cooper Black'; color: #F39C12;}
             </style> """, unsafe_allow_html=True)
             job_title = "Data scientist | ML Engineer | NLP"
             st.markdown(f"<h2 class='font'>{job_title}</h2>", unsafe_allow_html=True)

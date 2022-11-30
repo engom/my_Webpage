@@ -56,7 +56,7 @@ st.markdown("""
         </style>
         """, unsafe_allow_html=True)
 
-st.markdown(f"<h1 style='text-align: center; color: #7D3C98;'>{page_title}</h1>",
+st.markdown(f"<h1 style='text-align: center; color: #0000FF;'>{page_title}</h1>",
             unsafe_allow_html=True) # #000080
 
 
@@ -151,7 +151,7 @@ def main():
         col1, col2 = st.columns([0.8, 0.2])
         with col1:               # To display the header text using css style
             st.markdown(""" <style> .font {
-            font-size:35px ; font-family: 'Cooper Black'; color: #000080;}
+            font-size:35px ; font-family: 'Cooper Black'; color: #0000FF;}
             </style> """, unsafe_allow_html=True)
             job_title = "Data scientist | ML Engineer | NLP"
             st.markdown(f"<h2 class='font'>{job_title}</h2>", unsafe_allow_html=True)

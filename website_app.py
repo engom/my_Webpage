@@ -111,17 +111,17 @@ img_menu = get_img_as_base64("./images/marian.jpg")
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("data:image/png;base64,{img}");
-background-size: cover;
-background-position: top right;
+-- background-image: url("data:image/png;base64,{img}");
+-- background-size: cover;
+-- background-position: top right;
 -- background-repeat: no-repeat;
 -- background-attachment: fixed;
 }}
 [data-testid="stSidebar"] > div:first-child {{
-background-image: url("data:image/png;base64,{img_menu}");
-background-position: top left;
-background-repeat: no-repeat;
-background-attachment: fixed;
+-- background-image: url("data:image/png;base64,{img_menu}");
+-- background-position: top left;
+-- background-repeat: no-repeat;
+-- background-attachment: fixed;
 }}
 [data-testid="stHeader"] {{
 background: rgba(0,0,0,0);
@@ -151,9 +151,9 @@ def main():
         col1, col2 = st.columns([0.8, 0.2])
         with col1:               # To display the header text using css style
             st.markdown(""" <style> .font {
-            font-size:35px ; font-family: 'Cooper Black'; color: #FF9633;}
+            font-size:35px ; font-family: 'Cooper Black'; color: #000080;}
             </style> """, unsafe_allow_html=True)
-            job_title = "Data scientist | ML Engineer"
+            job_title = "Data scientist | ML Engineer | NLP"
             st.markdown(f"<h2 class='font'>{job_title}</h2>", unsafe_allow_html=True)
         with col2:               # To display brand log
             st.image(logo, width=130)
@@ -204,9 +204,11 @@ def main():
                 with col2:
                     st.image(profile, width=750)
 
-            st.success('LINKEDIN')
-            st.info(":link:: https://www.linkedin.com/in/elhadji-ngom-data-ai")
             url = "https://www.linkedin.com/in/elhadji-ngom-data-ai"
+            linkedin = f'''<a href="{url}">
+                        Visit the LINKEDIN profile
+                        </a>'''
+            st.markdown(linkedin, unsafe_allow_html=True)
             img = qrcode.make(url)
             virtualfile = io.BytesIO()
             img.save(virtualfile)
@@ -216,9 +218,12 @@ def main():
                     width=250,
                     caption="Please visit his Linkedin: scan me !")
 
-            st.success('GITHUB')
-            st.info(":link::\n https://github.com/engom")
+
             url = "https://github.com/engom"
+            github = f'''<a href="{url}">
+                        Visit the GITHUB page
+                        </a>'''
+            st.markdown(github, unsafe_allow_html=True)
             img = qrcode.make(url)
             virtualfile = io.BytesIO()
             img.save(virtualfile)
@@ -228,9 +233,12 @@ def main():
                          width=250,
                          caption="Please visit his github: scan me !")
 
-            st.success('APEC')
-            st.info(":link:: https://www.apec.fr/candidat/mon-espace.html#/")
+
             url = "https://www.apec.fr/candidat/mon-espace.html#/"
+            apec = f'''<a href="{url}">
+                        Visit the APEC profile
+                        </a>'''
+            st.markdown(apec, unsafe_allow_html=True)
             img = qrcode.make(url)
             virtualfile = io.BytesIO()
             img.save(virtualfile)

@@ -124,7 +124,7 @@ embed_component = {'linkedin':"""
 def main():
     # -------- MENU SIDE BAR ----------
     with st.sidebar:
-        choose = option_menu("Main Menu", ["About", "Projects", "Apps", "Contact"],
+        choose = option_menu("Page Menu", ["About", "Projects", "Apps", "Contact"],
                              icons=['house', 'bar-chart-line', 'app-indicator', 'person lines fill'],
                              menu_icon="list", default_index=0,
                              styles={
@@ -136,7 +136,7 @@ def main():
         )
 
 
-    logo = load_image(r'./images/data_science.png')
+    logo = load_image(r'./images/el_00.png')
     if choose == "About":
         col1, col2 = st.columns([0.8, 0.2])
         with col1:               # To display the header text using css style

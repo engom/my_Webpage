@@ -147,6 +147,7 @@ def main():
 
     logo = load_image(r'./images/data_science.png')
     profile = load_image(r"./images/my_in_profile.png")
+    #linkedin_badge = """ """
     if choose == "About":
         col1, col2 = st.columns([0.8, 0.2])
         with col1:               # To display the header text using css style
@@ -164,10 +165,11 @@ def main():
                     unsafe_allow_html=True)
         description = """
         Elhadji is a Junior Data science practitioner, NLP enthusiast,
-        and Python Engineer. He run data science projects with Python or R
-        to deal with NLP applications and/or Object Detection problems.
-        He works on data visualization, builds Streamlit app, etc.
-        He is also a football amateur who likes pop music.
+        and Python Engineer. He run data science projects with Python, R or SQL
+        to deal with NLP applications and/or Computer Vision problems.
+        He works on data visualization with Python (Matplotlib, Seaborn, Plotly),
+        builds Streamlit app, etc. He is also a football amateur who likes pop
+        music.
         """
         st.markdown(""" <style> .font_par {
         font-size:24px ; font-family: 'Black'; color: #FFFFF; font-style: oblique;}
@@ -202,7 +204,15 @@ def main():
             with st.container():
                 col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
                 with col2:
-                    st.image(profile, width=750)
+                    #st.image(profile, width=750)
+                    #st.markdown('<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>',
+                    #unsafe_allow_html=True)
+                    st.markdown("""
+                    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+                    <div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="elhadji-ngom-data-ai" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://fr.linkedin.com/in/elhadji-ngom-data-ai?trk=profile-badge">Elhadji Ngom</a></div>
+                    """, unsafe_allow_html=True)
+
 
             url = "https://www.linkedin.com/in/elhadji-ngom-data-ai"
             linkedin = f'''<a href="{url}">
@@ -419,7 +429,7 @@ def main():
                         unsafe_allow_html=True)
             st.markdown(f'<p class="font">{description2}</p>',
                         unsafe_allow_html=True)
-            st.info('Tools: spaCy - Transformers - Pytorch - Colab - Jupyterlab - Atom - GitHub')
+            st.info('Tools: spaCy - Transformers | BERT | BARThez - Pytorch - Colab - Jupyterlab - Atom - GitHub')
 
         elif topic == "Web Scraping":
             with st.container():

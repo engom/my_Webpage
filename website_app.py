@@ -229,7 +229,7 @@ def main():
                     #c0, ce, c1 = st.columns(3)
                     #with ce:
                     st.image(virtualfile,
-                            width=250,
+                            width=300,
                             caption="Please visit his Linkedin: scan me !")
 
 

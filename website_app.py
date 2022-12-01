@@ -199,7 +199,7 @@ def main():
         with st.container():
             st.markdown(f"<h2 style='text-align: center; font-style: italic;'>Social media</h2>",
                         unsafe_allow_html=True)
-            linkedin_p = "Read more about Elhadji's profile on Linkedin and GitHub."
+            linkedin_p = "Read more about Elhadji's profile on LinkedIN and GitHub."
             st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
             with st.container():
                 col1, ce, col2 = st.columns([0.4, 0.2, 0.4])
@@ -236,7 +236,7 @@ def main():
                 with col1:
                     url = "https://github.com/engom"
                     github = f'''<a href="{url}">
-                                GITHUB
+                                VISIT GITHUB
                                 </a>'''
                     img = qrcode.make(url)
                     virtualfile = io.BytesIO()
@@ -257,7 +257,7 @@ def main():
                     virtualfile = io.BytesIO()
                     img.save(virtualfile)
                     st.image(virtualfile,
-                             width=250,
+                             width=300,
                              caption="Please visit his Apec page: scan me!")
                 st.write('---')
 

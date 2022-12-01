@@ -194,7 +194,7 @@ def main():
                     data=PDFbyte,
                     file_name="CV-Elhadji-Ngom.pdf",
                     mime='application/octet-stream')
-
+        st.write("---")
         # -------- SOCIAL MEDIA LINKS ----------
         with st.container():
             st.markdown(f"<h2 style='text-align: center; font-style: italic;'>Social media</h2>",

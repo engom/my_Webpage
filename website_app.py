@@ -3,6 +3,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from streamlit_text_rating.st_text_rater import st_text_rater
+import streamlit.components.v1 as components
 
 from pathlib import Path
 from  PIL import Image
@@ -145,9 +146,8 @@ def main():
         }
         )
 
+
     logo = load_image(r'./images/data_science.png')
-    profile = load_image(r"./images/my_in_profile.png")
-    #linkedin_badge = """ """
     if choose == "About":
         col1, col2 = st.columns([0.8, 0.2])
         with col1:               # To display the header text using css style
@@ -202,61 +202,64 @@ def main():
             linkedin_p = "Read more about Elhadji's profile on Linkedin and GitHub."
             st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
             with st.container():
-                col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
+                col1, ce, col2 = st.columns([0.4, 0.2, 0.4])
+                with col1:
+                    embed_component = {'linkedin':"""
+                    <script src="https://platform.linkedin.com/badges/js/profile.js"
+                     async defer type="text/javascript">
+                    </script>
+                    <div class="badge-base LI-profile-badge" data-locale="fr_FR"
+                     data-size="large" data-theme="light" data-type="HORIZONTAL"
+                     data-vanity="elhadji-ngom-data-ai" data-version="v1">
+                     <a class="badge-base__link LI-simple-link"
+                     href="https://fr.linkedin.com/in/elhadji-ngom-data-ai?trk=profile-badge">
+                     </a></div>
+                    """}
+                    components.html(embed_component['linkedin'],height=310)
+
                 with col2:
-                    #st.image(profile, width=750)
-                    #st.markdown('<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>',
-                    #unsafe_allow_html=True)
-                    st.markdown("""
-                    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
-                    <div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="elhadji-ngom-data-ai" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://fr.linkedin.com/in/elhadji-ngom-data-ai?trk=profile-badge">Elhadji Ngom</a></div>
-                    """, unsafe_allow_html=True)
-
-
-            url = "https://www.linkedin.com/in/elhadji-ngom-data-ai"
-            linkedin = f'''<a href="{url}">
-                        Visit the LINKEDIN profile
-                        </a>'''
-            st.markdown(linkedin, unsafe_allow_html=True)
-            img = qrcode.make(url)
-            virtualfile = io.BytesIO()
-            img.save(virtualfile)
-            c0, ce, c1 = st.columns(3)
-            with ce:
-                st.image(virtualfile,
-                    width=250,
-                    caption="Please visit his Linkedin: scan me !")
+                    url = "https://www.linkedin.com/in/elhadji-ngom-data-ai"
+                    linkedin = f'''<a href="{url}">
+                                Visit the LINKEDIN profile
+                                </a>'''
+                    #st.markdown(linkedin, unsafe_allow_html=True)
+                    img = qrcode.make(url)
+                    virtualfile = io.BytesIO()
+                    img.save(virtualfile)
+                    #c0, ce, c1 = st.columns(3)
+                    #with ce:
+                    st.image(virtualfile,
+                            width=250,
+                            caption="Please visit his Linkedin: scan me !")
 
 
-            url = "https://github.com/engom"
-            github = f'''<a href="{url}">
-                        Visit the GITHUB page
-                        </a>'''
-            st.markdown(github, unsafe_allow_html=True)
-            img = qrcode.make(url)
-            virtualfile = io.BytesIO()
-            img.save(virtualfile)
-            c0, ce, c1 = st.columns(3)
-            with ce:
-                st.image(virtualfile,
-                         width=250,
-                         caption="Please visit his github: scan me !")
+                with col1:
+                    url = "https://github.com/engom"
+                    github = f'''<a href="{url}">
+                                GITHUB
+                                </a>'''
+                    img = qrcode.make(url)
+                    virtualfile = io.BytesIO()
+                    img.save(virtualfile)
+                    st.image(virtualfile,
+                             width=250,
+                             caption="Please visit his github: scan me !")
+                    st.markdown(github, unsafe_allow_html=True)
 
-
-            url = "https://www.apec.fr/candidat/mon-espace.html#/"
-            apec = f'''<a href="{url}">
-                        Visit the APEC profile
-                        </a>'''
-            st.markdown(apec, unsafe_allow_html=True)
-            img = qrcode.make(url)
-            virtualfile = io.BytesIO()
-            img.save(virtualfile)
-            c0, ce, c1 = st.columns(3)
-            with ce:
-                st.image(virtualfile,
-                         width=250,
-                         caption="Please visit his Apec page: scan me!")
+                with col2:
+                    url = "https://www.apec.fr/candidat/mon-espace.html#/"
+                    apec = f'''<a href="{url}">
+                                Visit the Apec profile
+                                </a>'''
+                    #st.markdown(apec, unsafe_allow_html=True)
+                    st.header("")
+                    img = qrcode.make(url)
+                    virtualfile = io.BytesIO()
+                    img.save(virtualfile)
+                    st.image(virtualfile,
+                             width=250,
+                             caption="Please visit his Apec page: scan me!")
+                st.write('---')
 
     elif choose == "Projects":
         topic = option_menu(None, ["Overview", "Konvoo-ETP", "Text Summary", "Web Scraping"],

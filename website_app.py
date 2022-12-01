@@ -242,7 +242,7 @@ def main():
                     virtualfile = io.BytesIO()
                     img.save(virtualfile)
                     st.image(virtualfile,
-                             width=250,
+                             width=300,
                              caption="Please visit his github: scan me !")
                     st.markdown(github, unsafe_allow_html=True)
 

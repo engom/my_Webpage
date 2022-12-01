@@ -154,14 +154,13 @@ def main():
                     unsafe_allow_html=True)
         description = """
         Elhadji is a Junior Data science practitioner, NLP enthusiast,
-        and Python Engineer. He run data science projects with Python, R or SQL
-        to deal with NLP applications and/or Computer Vision problems.
-        He works on data visualization with Python (Matplotlib, Seaborn, Plotly),
-        builds Streamlit app, etc. He is also a football amateur who likes pop
-        music.
+        and Machine Learning Engineer. He run data science projects with Python,
+        R or SQL to deal with NLP applications and Computer Vision problems.
+        He works on data visualization with Python (matplotlib, seaborn, plotly),
+        builds Streamlit App. Elhadji is also a football amateur who likes pop music.
         """
         st.markdown(""" <style> .font_par {
-        font-size:24px ; font-family: 'Black'; color: #FFFFF; font-style: oblique;}
+        font-size:21px ; font-family: 'Black'; color: #FFFFF; font-style: normal;}
         </style> """, unsafe_allow_html=True)
         st.markdown(f'<p class="font_par">{description}</p>',
                     unsafe_allow_html=True)
@@ -186,10 +185,12 @@ def main():
         st.write("---")
         # -------- SOCIAL MEDIA LINKS ----------
         with st.container():
-            st.markdown(f"<h2 style='text-align: center; font-style: italic;'>Social media</h2>",
+            linkedin_p = "Read more about Elhadji's profile on Linkedin and GitHub."
+            st.markdown(f"""<h3 style='text-align: center; font-style: italic;'>
+                    {linkedin_p}
+                    </h3>""",
                         unsafe_allow_html=True)
-            linkedin_p = "Read more about Elhadji's profile on LinkedIN and GitHub."
-            st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
+            #st.markdown(f'<p class="font_par">{linkedin_p}</p>',unsafe_allow_html=True)
             with st.container():
                 col1, ce, col2 = st.columns([0.4, 0.2, 0.4])
                 with col1:
@@ -198,9 +199,10 @@ def main():
                 with col2:
                     url = "https://www.linkedin.com/in/elhadji-ngom-data-ai"
                     linkedin = f'''<a href="{url}">
-                                Visit the LINKEDIN profile
+                                LINKEDIN
                                 </a>'''
                     #st.markdown(linkedin, unsafe_allow_html=True)
+                    st.header("")
                     img = qrcode.make(url)
                     virtualfile = io.BytesIO()
                     img.save(virtualfile)
@@ -220,7 +222,7 @@ def main():
                     virtualfile = io.BytesIO()
                     img.save(virtualfile)
                     st.image(virtualfile,
-                             width=300,
+                             width=260,
                              caption="Please visit his github: scan me !")
                     st.markdown(github, unsafe_allow_html=True)
 
@@ -230,12 +232,12 @@ def main():
                                 Visit the Apec profile
                                 </a>'''
                     #st.markdown(apec, unsafe_allow_html=True)
-                    st.header("")
+                    st.header(" ")
                     img = qrcode.make(url)
                     virtualfile = io.BytesIO()
                     img.save(virtualfile)
                     st.image(virtualfile,
-                             width=300,
+                             width=260,
                              caption="Please visit his Apec page: scan me!")
                 st.write('---')
 

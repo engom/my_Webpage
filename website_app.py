@@ -155,7 +155,7 @@ def main():
                     unsafe_allow_html=True)
         description = """
         Elhadji is a Junior Data science practitioner, NLP enthusiast,
-        and Machine Learning Engineer. He run data science projects with Python,
+        and Machine Learning Engineer. He runs data science projects with Python,
         R or SQL to deal with NLP applications and Computer Vision problems.
         He works on data visualization with Python (matplotlib, seaborn, plotly),
         builds Streamlit App. Elhadji is also a football amateur who likes pop music.

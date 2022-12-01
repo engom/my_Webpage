@@ -206,8 +206,6 @@ def main():
                     img = qrcode.make(url)
                     virtualfile = io.BytesIO()
                     img.save(virtualfile)
-                    #c0, ce, c1 = st.columns(3)
-                    #with ce:
                     st.image(virtualfile,
                             width=260,
                             caption="Please visit his Linkedin: scan me !")
@@ -216,7 +214,7 @@ def main():
                 with col1:
                     url = "https://github.com/engom"
                     github = f'''<a href="{url}">
-                                VISIT GITHUB
+                                Visit GitHub
                                 </a>'''
                     img = qrcode.make(url)
                     virtualfile = io.BytesIO()
@@ -224,7 +222,6 @@ def main():
                     st.image(virtualfile,
                              width=260,
                              caption="Please visit his github: scan me !")
-                    st.markdown(github, unsafe_allow_html=True)
 
                 with col2:
                     url = "https://www.apec.fr/candidat/mon-espace.html#/"
@@ -236,6 +233,10 @@ def main():
                     st.image(virtualfile,
                              width=260,
                              caption="Please visit his Apec page: scan me!")
+
+                c0, ce, c1 = st.columns([0.45, 0.2, 0.4])
+                with ce:
+                    st.markdown(github, unsafe_allow_html=True)
                 st.write('---')
 
     elif choose == "Projects":

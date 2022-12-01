@@ -107,29 +107,18 @@ def get_img_as_base64(file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-img = get_img_as_base64("./images/bg_image.jpeg")
-img_menu = get_img_as_base64("./images/marian.jpg")
-page_bg_img = f"""
-<style>
-[data-testid="stAppViewContainer"] > .main {{
--- background-image: url("data:image/png;base64,{img}");
--- background-size: cover;
--- background-position: top right;
--- background-repeat: no-repeat;
--- background-attachment: fixed;
-}}
-[data-testid="stSidebar"] > div:first-child {{
--- background-image: url("data:image/png;base64,{img_menu}");
--- background-position: top left;
--- background-repeat: no-repeat;
--- background-attachment: fixed;
-}}
-[data-testid="stHeader"] {{
-background: rgba(0,0,0,0);
-}}
-</style>
-"""
-st.markdown(page_bg_img, unsafe_allow_html=True)
+# badge linkedin
+embed_component = {'linkedin':"""
+<script src="https://platform.linkedin.com/badges/js/profile.js"
+ async defer type="text/javascript">
+</script>
+<div class="badge-base LI-profile-badge" data-locale="fr_FR"
+ data-size="large" data-theme="light" data-type="HORIZONTAL"
+ data-vanity="elhadji-ngom-data-ai" data-version="v1">
+ <a class="badge-base__link LI-simple-link"
+ href="https://fr.linkedin.com/in/elhadji-ngom-data-ai?trk=profile-badge">
+ </a></div>
+"""}
 
 ################## MAIN #####################
 def main():
@@ -204,18 +193,7 @@ def main():
             with st.container():
                 col1, ce, col2 = st.columns([0.4, 0.2, 0.4])
                 with col1:
-                    embed_component = {'linkedin':"""
-                    <script src="https://platform.linkedin.com/badges/js/profile.js"
-                     async defer type="text/javascript">
-                    </script>
-                    <div class="badge-base LI-profile-badge" data-locale="fr_FR"
-                     data-size="large" data-theme="light" data-type="HORIZONTAL"
-                     data-vanity="elhadji-ngom-data-ai" data-version="v1">
-                     <a class="badge-base__link LI-simple-link"
-                     href="https://fr.linkedin.com/in/elhadji-ngom-data-ai?trk=profile-badge">
-                     </a></div>
-                    """}
-                    components.html(embed_component['linkedin'],height=310)
+                    components.html(embed_component['linkedin'], height=350)
 
                 with col2:
                     url = "https://www.linkedin.com/in/elhadji-ngom-data-ai"
@@ -272,6 +250,9 @@ def main():
         "nav-link-selected": {"background-color": "#566573"}, # "#080000"  #586e75
         },orientation='horizontal'
         )
+        # add linkedin on sidebar
+        with st.sidebar:
+            components.html(embed_component['linkedin'],height=300)
 
         st.write('')
         if topic=='Konvoo-ETP':
@@ -447,6 +428,10 @@ def main():
         # ------- TO DO -----
         # Create and share beautiful images of your source code
         # >>> https://carbon.now.sh/
+        # add linkedin on sidebar
+        with st.sidebar:
+            components.html(embed_component['linkedin'],height=300)
+
         st.markdown("""<h3 style='text-align: center; font-style: italic;'>
                     Apps deployed
                     </h3>""",
@@ -495,6 +480,10 @@ def main():
 
     elif choose == "Contact":
         # ------ TO DO -------
+        # add linkedin on sidebar
+        with st.sidebar:
+            components.html(embed_component['linkedin'],height=300)
+
         st.success("ELHADJI'S MAILBOX :")
         c1, ce, c2 = st.columns([4, 4, 3])
         with c1:

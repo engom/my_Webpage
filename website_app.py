@@ -150,7 +150,8 @@ def main():
         st.write('---')
 
         # --------- ABOUT ME ------------------
-        st.markdown(f"<h2 style='text-align: center; font-style: italic;'> About the creator :</h2>",
+        st.markdown(f"""<h2 style='text-align: center; font-style: normal;'>
+                    About the creator :</h2>""",
                     unsafe_allow_html=True)
         description = """
         Elhadji is a Junior Data science practitioner, NLP enthusiast,
@@ -202,7 +203,6 @@ def main():
                                 LINKEDIN
                                 </a>'''
                     #st.markdown(linkedin, unsafe_allow_html=True)
-                    st.header("")
                     img = qrcode.make(url)
                     virtualfile = io.BytesIO()
                     img.save(virtualfile)
@@ -228,10 +228,7 @@ def main():
 
                 with col2:
                     url = "https://www.apec.fr/candidat/mon-espace.html#/"
-                    apec = f'''<a href="{url}">
-                                Visit the Apec profile
-                                </a>'''
-                    #st.markdown(apec, unsafe_allow_html=True)
+                    st.header(" ")
                     st.header(" ")
                     img = qrcode.make(url)
                     virtualfile = io.BytesIO()

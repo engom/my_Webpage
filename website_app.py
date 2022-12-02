@@ -154,11 +154,11 @@ def main():
                     About the creator :</h2>""",
                     unsafe_allow_html=True)
         description = """
-        Elhadji is a Junior Data science practitioner, NLP enthusiast,
-        and Machine Learning Engineer. He runs data science projects with Python,
-        R or SQL to deal with NLP applications and Computer Vision problems.
-        He works on data visualization with Python (matplotlib, seaborn, plotly),
-        builds Streamlit App. Elhadji is also a football amateur who likes pop music.
+        Elhadji is a junior data scientist, NLP practitioner and machine learning engineer.
+        It runs data science projects with Python, R or SQL to handle NLP applications and
+        computer vision subjects. He works on data visualization with Python (matplotlib,
+        seaborn, plot), and builds the Streamlit application. Elhadji is also an amateur
+        footballer with a passion for pop music.
         """
         st.markdown(""" <style> .font_par {
         font-size:21px ; font-family: 'Black'; color: #FFFFF; font-style: normal;}

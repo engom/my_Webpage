@@ -157,7 +157,7 @@ def main():
         Elhadji is a junior data science practitioner, NLP enthusiast and machine learning engineer.
         He runs data science projects with Python, R or SQL to handle NLP applications and
         computer vision subjects. He also works on data visualization with Python (matplotlib,
-        seaborn, plot), and builds the Streamlit application. Elhadji is an amateur
+        seaborn, plot), and builds Streamlit apps. Elhadji is an amateur
         footballer with a passion for pop music.
         """
         st.markdown(""" <style> .font_par {

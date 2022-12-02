@@ -154,7 +154,7 @@ def main():
                     About the creator :</h2>""",
                     unsafe_allow_html=True)
         description = """
-        Elhadji is a junior data scientist, NLP practitioner and machine learning engineer.
+        Elhadji is a junior data scientist practitioner, NLP enthusiast and machine learning engineer.
         It runs data science projects with Python, R or SQL to handle NLP applications and
         computer vision subjects. He works on data visualization with Python (matplotlib,
         seaborn, plot), and builds the Streamlit application. Elhadji is also an amateur

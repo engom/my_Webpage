@@ -135,7 +135,7 @@ def main():
             "nav-link-selected": {"background-color": "#24A608"},
         }
         )
-        st.image(ds_img, width=250)
+
 
     logo = load_image(r'./images/el_00.png')
     if choose == "About":
@@ -148,6 +148,9 @@ def main():
             st.markdown(f"<h2 class='font'>{job_title}</h2>", unsafe_allow_html=True)
         with col2:               # To display brand log
             st.image(logo, width=130)
+
+        with st.sidebar:
+            st.image(ds_img, width=260)
         st.write('---')
 
         # --------- ABOUT ME ------------------

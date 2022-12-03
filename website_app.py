@@ -124,7 +124,6 @@ embed_component = {'linkedin':"""
 def main():
     # -------- MENU SIDE BAR ----------
     with st.sidebar:
-        ds_img = load_image(r'./images/data_science.png')
         choose = option_menu("Page Menu", ["About", "Projects", "Apps", "Contact"],
                              icons=['house', 'bar-chart-line', 'app-indicator', 'person lines fill'],
                              menu_icon="list", default_index=0,
@@ -138,6 +137,7 @@ def main():
 
 
     logo = load_image(r'./images/el_00.png')
+    #ds_img = load_image(r'./images/data_science.png')
     if choose == "About":
         col1, col2 = st.columns([0.8, 0.2])
         with col1:               # To display the header text using css style
@@ -149,8 +149,8 @@ def main():
         with col2:               # To display brand log
             st.image(logo, width=130)
 
-        with st.sidebar:
-            st.image(ds_img, width=260)
+        #with st.sidebar:
+        #    st.image(ds_img, width=260)
         st.write('---')
 
         # --------- ABOUT ME ------------------

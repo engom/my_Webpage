@@ -135,7 +135,7 @@ def main():
             "nav-link-selected": {"background-color": "#24A608"},
         }
         )
-        st.image(ds_img, width=300)
+        st.image(ds_img, width=250)
 
     logo = load_image(r'./images/el_00.png')
     if choose == "About":

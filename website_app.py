@@ -123,7 +123,6 @@ embed_component = {'linkedin':"""
 ################## MAIN #####################
 def main():
     # -------- MENU SIDE BAR ----------
-    ds_img = load_image(r'.images/data_science.png')
     with st.sidebar:
         choose = option_menu("Page Menu", ["About", "Projects", "Apps", "Contact"],
                              icons=['house', 'bar-chart-line', 'app-indicator', 'person lines fill'],
@@ -135,7 +134,6 @@ def main():
             "nav-link-selected": {"background-color": "#24A608"},
         }
         )
-        st.image(ds_img, width=300)
 
     logo = load_image(r'./images/el_00.png')
     if choose == "About":

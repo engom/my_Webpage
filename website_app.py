@@ -232,7 +232,7 @@ def main():
                     virtualfile = io.BytesIO()
                     img.save(virtualfile)
                     st.image(virtualfile,
-                             width=260,
+                             width=270,
                              caption="Please visit his github: scan me !")
 
 

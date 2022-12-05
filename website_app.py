@@ -118,7 +118,15 @@ embed_component = {'linkedin':"""
  <a class="badge-base__link LI-simple-link"
  href="https://fr.linkedin.com/in/elhadji-ngom-data-ai?trk=profile-badge">
  </a></div>
+""",
+'github':"""
+<a href="https://github.com/engom"><img
+src="https://img.shields.io/static/v1?label=ENGOM&message=GitHub+profile&color=
+2ea44f&style=for-the-badge&logo=%23FC6D26" alt="engom - Visit GitHub profile">
+</a>
 """}
+
+
 
 ################## MAIN #####################
 def main():
@@ -150,7 +158,7 @@ def main():
             st.image(logo, width=130)
 
         #with st.sidebar:
-        #    st.image(ds_img, width=260)
+            #st.markdown(embed_component['github'], unsafe_allow_html=True)
         st.write('---')
 
         # --------- ABOUT ME ------------------
@@ -227,6 +235,7 @@ def main():
                              width=260,
                              caption="Please visit his github: scan me !")
 
+
                 with col2:
                     url = "https://www.apec.fr/candidat/mon-espace.html#/"
                     st.header(" ")
@@ -238,9 +247,10 @@ def main():
                              width=260,
                              caption="Please visit his Apec page: scan me!")
 
-                c0, ce, c1 = st.columns([0.45, 0.2, 0.4])
+                c0, ce, c1 = st.columns([0.35, 0.35, 0.3])
                 with ce:
-                    st.markdown(github, unsafe_allow_html=True)
+                    #st.markdown(github, unsafe_allow_html=True)
+                    st.markdown(embed_component['github'], unsafe_allow_html=True)
                 st.write('---')
 
     elif choose == "Projects":

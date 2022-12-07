@@ -119,6 +119,13 @@ embed_component = {'linkedin':"""
  href="https://fr.linkedin.com/in/elhadji-ngom-data-ai?trk=profile-badge">
  </a></div>
 """,
+'linkedin_p':"""
+<a href="https://fr.linkedin.com/in/elhadji-ngom-data-ai"><img
+src="https://img.shields.io/static/v1?label=Linkedin&message=Visit+LinkedIN+
+profile&color=9cf&style=for-the-badge" alt="Linkedin - Visit LinkedIN profile">
+</a>
+"""
+,
 'github':"""
 <a href="https://github.com/engom"><img
 src="https://img.shields.io/static/v1?label=ENGOM&message=GitHub+profile&color=
@@ -207,7 +214,8 @@ def main():
             with st.container():
                 col1, ce, col2 = st.columns([0.4, 0.2, 0.4])
                 with col1:
-                    components.html(embed_component['linkedin'], height=350)
+                    components.html(embed_component['linkedin'], height=300)
+                    st.markdown(embed_component['linkedin_p'], unsafe_allow_html=True)
 
                 with col2:
                     url = "https://www.linkedin.com/in/elhadji-ngom-data-ai"

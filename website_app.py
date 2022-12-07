@@ -251,7 +251,7 @@ def main():
 
                 with col2:
                     url = "https://www.apec.fr/candidat/mon-espace.html#/"
-                    st.header(" ")
+                    #st.header(" ")
                     #st.header(" ")
                     img = qrcode.make(url)
                     virtualfile = io.BytesIO()

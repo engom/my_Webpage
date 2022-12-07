@@ -226,7 +226,8 @@ def main():
                     linkedin = f'''<a href="{url}">
                                 LINKEDIN
                                 </a>'''
-                    #st.markdown(linkedin, unsafe_allow_html=True)
+                    st.header("")
+                    st.header("")
                     img = qrcode.make(url)
                     virtualfile = io.BytesIO()
                     img.save(virtualfile)

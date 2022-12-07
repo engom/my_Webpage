@@ -207,7 +207,7 @@ def main():
             with st.container():
                 col1, ce, col2 = st.columns([0.4, 0.2, 0.4])
                 with col1:
-                    st.markdown(embed_component['linkedin'], unsafe_allow_html=True) #  height=350,
+                    components.html(embed_component['linkedin'], height=350)
 
                 with col2:
                     url = "https://www.linkedin.com/in/elhadji-ngom-data-ai"

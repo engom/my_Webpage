@@ -214,11 +214,11 @@ def main():
             with st.container():
                 col1, ce, col2 = st.columns([0.4, 0.2, 0.4])
                 with col1:
-                    st.markdown(f"""<h3 style='text-align: center;'>
-                                {embed_component['linkedin_p']}</h3>""",
+                    st.markdown(f"""<h5 style='text-align: center;'>
+                                {embed_component['linkedin_p']}</h5>""",
                                 unsafe_allow_html=True)
                     components.html(embed_component['linkedin'],
-                                height=300)
+                                height=280)
 
 
                 with col2:

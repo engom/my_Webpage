@@ -14,7 +14,7 @@ Elhadji's personal website to showcase data science work.
   - Cloud computing:
     - **AWS:** `EC2`-`Auto Scaling Group`-`ELB`-`SQS`-`SNS`-
       `Lambda`-`ECR`-`EKS`-`VPC`-`IGW`-`Amazon ACL`-`Security Group`-`DNS Route 53`-`EBS`-`S3`-
-      `Amazon RDS`-`Amazon DynamoDB`-`Amazon Redshift`, `Amazon DMS`
+      `Amazon RDS`-`Amazon DynamoDB`-`Amazon Redshift`-`Amazon DMS`.
     - **DOCKER**
 
   - Data science

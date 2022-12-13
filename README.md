@@ -10,9 +10,12 @@ Elhadji's personal website to showcase data science work.
 
   - Data Engineering:
     - **Web scraping:** `BeautifulSoup` - `Selenium` - `Scrapy`
-    - **Cloud computing/AWS:** `EC2`-`Auto Scaling Group`-`ELB`-`SQS`-`SNS`-
+
+  - Cloud computing:
+    - **AWS:** `EC2`-`Auto Scaling Group`-`ELB`-`SQS`-`SNS`-
       `Lambda`-`ECR`-`EKS`-`VPC`-`IGW`-`Amazon ACL`-`Security Group`-`DNS Route 53`-`EBS`-`S3`-
       `Amazon RDS`-`Amazon DynamoDB`-`Amazon Redshift`, `Amazon DMS`
+    - **DOCKER**
 
   - Data science
     - **Preprocessing** text data

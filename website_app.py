@@ -173,20 +173,37 @@ def main():
                     About the creator :</h2>""",
                     unsafe_allow_html=True)
         par1 = """
-        Elhadji is a data scientist, NLP enthusiast and machine learning engineer.
-        He runs data science projects with Python, R or SQL to handle NLP applications and
-        computer vision subjects. He also works on data visualization with Python (matplotlib,
-        seaborn, plotly), and builds beautiful custom front-end web applications with Streamlit
-        to make predictions. Elhadji is an amateur footballer with a passion for pop music.
-
-
+        Elhadji is a highly skilled and versatile data scientist with a strong
+        background in natural language processing (NLP) and machine learning
+        engineering. He has a deep understanding of a wide range of programming
+        languages and tools, including Python, R, and SQL, and is able to apply
+        these skills to a variety of projects involving NLP applications and
+        computer vision.
+        """
+        par2 = """
+        In addition to his technical expertise, Elhadji is also proficient in
+        data visualization, using Python libraries such as matplotlib, seaborn,
+        and plotly to create visually appealing and informative graphics. He is
+        also skilled in building custom front-end web applications using
+        Streamlit, which he uses to create interactive dashboards and make
+        predictions.
+        """
+        par3 = """
+        Outside of his professional pursuits, Elhadji is an avid amateur
+        footballer and has a passion for pop music. These interests help him
+        stay balanced and bring joy to his life outside of work. Overall,
+        Elhadji is a dedicated and hardworking individual who is always looking
+        for new opportunities to learn and grow in his field.
         """
         st.markdown(""" <style> .font_par {
         font-size:21px ; font-family: 'Black'; color: #FFFFF; font-style: normal;}
         </style> """, unsafe_allow_html=True)
         st.markdown(f'<p class="font_par">{par1}</p>',
                     unsafe_allow_html=True)
-
+        st.markdown(f'<p class="font_par">{par2}</p>',
+                    unsafe_allow_html=True)
+        st.markdown(f'<p class="font_par">{par3}</p>',
+                    unsafe_allow_html=True)
         #------- DISPLAY MY CV  ----------------
         #with st.expander("ℹ️  Read Elhadji's CV", expanded=False):
         #    try:

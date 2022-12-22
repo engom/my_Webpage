@@ -224,7 +224,7 @@ def main():
         st.write("---")
         # -------- SOCIAL MEDIA LINKS ----------
         with st.container():
-            linkedin_p = "Read more about Elhadji's profile on Linkedin and GitHub."
+            linkedin_p = "Learn about Elhadji's background and accomplishments: Visit his LinkedIn and GitHub profiles."
             st.markdown(f"""<h3 style='text-align: center; font-style: italic;'>
                     {linkedin_p}
                     </h3>""",

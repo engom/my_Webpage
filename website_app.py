@@ -173,12 +173,12 @@ def main():
                     About the creator :</h2>""",
                     unsafe_allow_html=True)
         par1 = """
-        Elhadji is a highly skilled and versatile data scientist with a strong
-        background in natural language processing (NLP) and machine learning
-        engineering. He has a deep understanding of a wide range of programming
-        languages and tools, including Python, R, and SQL, and is able to apply
-        these skills to a variety of projects involving NLP applications and
-        computer vision.
+        Elhadji is a skilled and versatile data scientist with a strong
+        background in applied mathematics, natural language processing (NLP)
+        and machine learning engineering. He has a deep understanding of a wide
+        range of programming languages and tools, including Python, R, and SQL,
+        and is able to apply these skills to a variety of projects involving NLP
+        applications and computer vision.
         """
         par2 = """
         In addition to his technical expertise, Elhadji is also proficient in

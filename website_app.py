@@ -172,36 +172,38 @@ def main():
         st.markdown(f"""<h2 style='text-align: center; font-style: normal;'>
                     About the creator :</h2>""",
                     unsafe_allow_html=True)
-        description = """
+        par1 = """
         Elhadji is a data scientist, NLP enthusiast and machine learning engineer.
         He runs data science projects with Python, R or SQL to handle NLP applications and
         computer vision subjects. He also works on data visualization with Python (matplotlib,
         seaborn, plotly), and builds beautiful custom front-end web applications with Streamlit
         to make predictions. Elhadji is an amateur footballer with a passion for pop music.
+
+
         """
         st.markdown(""" <style> .font_par {
         font-size:21px ; font-family: 'Black'; color: #FFFFF; font-style: normal;}
         </style> """, unsafe_allow_html=True)
-        st.markdown(f'<p class="font_par">{description}</p>',
+        st.markdown(f'<p class="font_par">{par1}</p>',
                     unsafe_allow_html=True)
 
         #------- DISPLAY MY CV  ----------------
-        with st.expander("ℹ️  Read Elhadji's CV", expanded=False):
-            try:
-                show_pdf(f'./{cv_name}')
-            except:
-                st.warning('File type should pdf !!!')
+        #with st.expander("ℹ️  Read Elhadji's CV", expanded=False):
+        #    try:
+        #        show_pdf(f'./{cv_name}')
+        #    except:
+        #        st.warning('File type should pdf !!!')
 
         # ------ CV DOWNLOAD BUTTON ------------
-        col1, col2, col3= st.columns(3)
+        #col1, col2, col3= st.columns(3)
 
-        with col2:
-            with open(f'./{cv_name}', "rb") as pdf_file:
-                PDFbyte = pdf_file.read()
-            st.download_button(label="Download CV/Resume", key='1',
-                    data=PDFbyte,
-                    file_name="CV-Elhadji-Ngom.pdf",
-                    mime='application/octet-stream')
+        #with col2:
+        #    with open(f'./{cv_name}', "rb") as pdf_file:
+        #        PDFbyte = pdf_file.read()
+            #st.download_button(label="Download CV/Resume", key='1',
+            #        data=PDFbyte,
+            #        file_name="CV-Elhadji-Ngom.pdf",
+            #        mime='application/octet-stream')
         st.write("---")
         # -------- SOCIAL MEDIA LINKS ----------
         with st.container():

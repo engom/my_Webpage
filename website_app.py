@@ -131,7 +131,16 @@ profile&color=9cf&style=for-the-badge" alt="Linkedin - Visit LinkedIN profile">
 src="https://img.shields.io/static/v1?label=ENGOM&message=GitHub+profile&color=
 2ea44f&style=for-the-badge&logo=%23FC6D26" alt="engom - Visit GitHub profile">
 </a>
-"""}
+""",
+'aws-clf-001':"""
+<div data-iframe-width="150" data-iframe-height="270"
+ data-share-badge-id="ed24e79b-0b1b-4955-b309-6ab56f114364"
+ data-share-badge-host="https://www.credly.com"></div>
+ <script
+ type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js">
+ </script>
+"""
+}
 
 
 
@@ -152,9 +161,9 @@ def main():
 
 
     logo = load_image(r'./images/el_00.png')
-    #ds_img = load_image(r'./images/data_science.png')
+    aws_img = load_image(r'./images/aws-certified-cloud-practitioner.png')
     if choose == "About":
-        col1, col2 = st.columns([0.8, 0.2])
+        col1, col2, col3 = st.columns([0.6, 0.2, 0.2])
         with col1:               # To display the header text using css style
             st.markdown(""" <style> .font {
             font-size:35px ; font-family: 'Cooper Black'; color: #F39C12;}
@@ -164,8 +173,9 @@ def main():
         with col2:               # To display brand log
             st.image(logo, width=130)
 
-        #with st.sidebar:
-            #st.markdown(embed_component['github'], unsafe_allow_html=True)
+        with col3:
+            #st.markdown(embed_component['aws-clf-001'], unsafe_allow_html=True)
+            st.image(aws_img, width=130)
         st.write('---')
 
         # --------- ABOUT ME ------------------
@@ -178,7 +188,7 @@ def main():
         and machine learning engineering. He has a deep understanding of a wide
         range of programming languages and tools, including Python, R, and SQL,
         and is able to apply these skills to a variety of projects involving NLP
-        applications and computer vision.
+        applications and cloud computing.
         """
         par2 = """
         In addition to his technical expertise, Elhadji is also proficient in

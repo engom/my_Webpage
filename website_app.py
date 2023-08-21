@@ -168,7 +168,7 @@ def main():
             st.markdown(""" <style> .font {
             font-size:35px ; font-family: 'Cooper Black'; color: #F39C12;}
             </style> """, unsafe_allow_html=True)
-            job_title = "Data scientist | ML Engineer | NLP"
+            job_title = "Data scientist | ML Engineer | NLP/LLM"
             st.markdown(f"<h2 class='font'>{job_title}</h2>", unsafe_allow_html=True)
         with col2:               # To display brand log
             st.image(logo, width=130)
@@ -188,7 +188,7 @@ def main():
         and machine learning engineering. He has a deep understanding of a wide
         range of programming languages and tools, including Python, R, and SQL,
         and is able to apply these skills to a variety of projects involving NLP
-        applications, DevOps, and cloud computing.
+        applications with AI (LLM), DevOps, and Cloud computing.
         """
         par2 = """
         In addition to his technical expertise, Elhadji is also proficient in

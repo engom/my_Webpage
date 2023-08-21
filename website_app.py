@@ -194,8 +194,8 @@ def main():
         In addition to his technical expertise, Elhadji is also proficient in
         data visualization, using Python libraries such as matplotlib, seaborn,
         and plotly to create visually appealing and informative graphics. He is
-        also skilled in building custom front-end web applications using
-        Streamlit, which he uses to create interactive dashboards and make
+        also skilled in building custom front-end web applications with framework like
+        Streamlit, FastAPI or Flask, which he uses to create interactive dashboards and make
         predictions.
         """
         par3 = """

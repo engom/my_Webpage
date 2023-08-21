@@ -188,7 +188,7 @@ def main():
         and machine learning engineering. He has a deep understanding of a wide
         range of programming languages and tools, including Python, R, and SQL,
         and is able to apply these skills to a variety of projects involving NLP
-        applications and cloud computing.
+        applications, DevOps, and cloud computing.
         """
         par2 = """
         In addition to his technical expertise, Elhadji is also proficient in
